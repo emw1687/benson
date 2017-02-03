@@ -1,0 +1,2558 @@
+(dp0
+S'Wanderlust'
+p1
+S'Danielle Steel'
+p2
+sS'The Deep End of the Ocean'
+p3
+S'Jacquelyn Mitchard'
+p4
+sS'Dead Reckoning'
+p5
+S'Charlaine Harris'
+p6
+sS'Family Album'
+p7
+g2
+sS'The Salzburg Connection'
+p8
+S'Helen MacInnes'
+p9
+sS'Dead Ever After'
+p10
+g6
+sS'Escape Clause'
+p11
+S'John Sandford'
+p12
+sS'The Song of Bernadette'
+p13
+S'Franz Werfel'
+p14
+sS'The Corrections'
+p15
+S'Jonathan Franzen'
+p16
+sS'The Liar'
+p17
+S'Nora Roberts'
+p18
+sS'The Lost Symbol'
+p19
+S'Dan Brown'
+p20
+sS"Written in My Own Heart's Blood"
+p21
+S'Diana Gabaldon'
+p22
+sS'Point of Origin'
+p23
+S'Patricia Cornwell'
+p24
+sS'The Thirteenth Tale'
+p25
+S'Diane Setterfield'
+p26
+sS'The Silmarillion'
+p27
+S'J.R.R. Tolkien'
+p28
+sS'Zoya'
+p29
+g2
+sS'The Invention of Wings'
+p30
+S'Sue Monk Kidd'
+p31
+sS'Lucky'
+p32
+S'Jackie Collins'
+p33
+sS'Doctor Zhivago'
+p34
+S'Boris Pasternak'
+p35
+sS'Burr'
+p36
+S'Gore Vidal'
+p37
+sS'Lifeguard'
+p38
+S'James Patterson'
+p39
+sS'Handle with Care'
+p40
+S'Jodi Picoult'
+p41
+sS'The One and Only'
+p42
+S'Emily Giffin'
+p43
+sS'Cold Mountain'
+p44
+S'Charles Frazier'
+p45
+sS'Easy Prey'
+p46
+g12
+sS'Alaska'
+p47
+S'James A. Michener'
+p48
+sS"Everything's Eventual"
+p49
+S'Stephen King'
+p50
+sS'Topaz'
+p51
+S'Leon Uris'
+p52
+sS'Sizzling Sixteen'
+p53
+S'Janet Evanovich'
+p54
+sS'Wheels'
+p55
+S'Arthur Hailey'
+p56
+sS'Hannibal'
+p57
+S'Thomas Harris'
+p58
+sS'Act of War'
+p59
+S'Brad Thor'
+p60
+sS'The Black Widow'
+p61
+S'Daniel Silva'
+p62
+sS'Midnight'
+p63
+S'Dean Koontz'
+p64
+sS'Johnny Angel'
+p65
+g2
+sS'The Historian'
+p66
+S'Elizabeth Kostova'
+p67
+sS'Rise and Shine'
+p68
+S'Anna Quindlen'
+p69
+sS'The 5th Horseman'
+p70
+S'James Patterson'
+p71
+sS'Silver Borne'
+p72
+S'Patricia Briggs'
+p73
+sS'The Seeress of Kell'
+p74
+S'David Eddings'
+p75
+sS"Daddy's Little Girl"
+p76
+S'Mary Higgins Clark'
+p77
+sS'Rainbow Six'
+p78
+S'Tom Clancy'
+p79
+sS'Knife of Dreams'
+p80
+S'Robert Jordan'
+p81
+sS'All the Light We Cannot See'
+p82
+S'Anthony Doerr'
+p83
+sS'Love Story'
+p84
+S'Erich Segal'
+p85
+sS'Franny and Zooey'
+p86
+S'J.D. Salinger'
+p87
+sS'Phantom'
+p88
+S'Terry Goodkind'
+p89
+sS'The Name of the Rose'
+p90
+S'Umberto Eco'
+p91
+sS'The Covenant'
+p92
+g48
+sS'The Broker'
+p93
+S'John Grisham'
+p94
+sS'The Inner Circle'
+p95
+S'Brad Meltzer'
+p96
+sS'Noble House'
+p97
+S'James Clavell'
+p98
+sS'North and South'
+p99
+S'John Jakes'
+p100
+sS'Where Is Joe Merchant?'
+p101
+S'Jimmy Buffett'
+p102
+sS'Captain from Castile'
+p103
+S'Samuel Shellabarger'
+p104
+sS"Alex Cross's Trial"
+p105
+S'James Patterson'
+p106
+sS'Cujo'
+p107
+g50
+sS'Alone'
+p108
+S'Lisa Gardner'
+p109
+sS'Anathem'
+p110
+S'Neal Stephenson'
+p111
+sS'Mixed Blessings'
+p112
+g2
+sS'The Shelters of Stone'
+p113
+S'Jean M. Auel'
+p114
+sS'Private Games'
+p115
+S'James Patterson'
+p116
+sS'Without Remorse'
+p117
+g79
+sS'I Know This Much is True'
+p118
+S'Wally Lamb'
+p119
+sS'Point of No Return'
+p120
+S'John P. Marquand'
+p121
+sS"B.F.'s Daughter"
+p122
+g121
+sS'Insidious'
+p123
+S'Catherine Coulter'
+p124
+sS'Black Notice'
+p125
+g24
+sS'Changes'
+p126
+S'Jim Butcher'
+p127
+sS'The Source'
+p128
+g48
+sS'The Celestine Prophecy'
+p129
+S'James Redfield'
+p130
+sS'The Fourth Hand'
+p131
+S'John Irving'
+p132
+sS'Knockout'
+p133
+g124
+sS'Tinker Tailor Soldier Spy'
+p134
+S'John le Carr\xc3\xa9'
+p135
+sS'The Last Juror'
+p136
+g94
+sS'Jewels'
+p137
+g2
+sS'The Talisman'
+p138
+S'Stephen King'
+p139
+sS'Not as a Stranger'
+p140
+S'Morton Thompson'
+p141
+sS'What the Night Knows'
+p142
+g64
+sS'The Key to Rebecca'
+p143
+S'Ken Follett'
+p144
+sS'The Bonfire of the Vanities'
+p145
+S'Tom Wolfe'
+p146
+sS'Cell'
+p147
+g50
+sS'Dead or Alive'
+p148
+S'Tom Clancy'
+p149
+sS'A Perfect Spy'
+p150
+g135
+sS'Crossroads of Twilight'
+p151
+g81
+sS'Burn'
+p152
+S'Maya Banks'
+p153
+sS'Sail'
+p154
+S'James Patterson'
+p155
+sS'Gorky Park'
+p156
+S'Martin Cruz Smith'
+p157
+sS'The Alibi'
+p158
+S'Sandra Brown'
+p159
+sS'"R" Is for Ricochet'
+p160
+S'Sue Grafton'
+p161
+sS'The Wedding'
+p162
+g2
+sS'The Client'
+p163
+g94
+sS'The Queen of the Damned'
+p164
+S'Anne Rice'
+p165
+sS'Jubal Sackett'
+p166
+S"Louis L'Amour"
+p167
+sS'The Lovely Bones'
+p168
+S'Alice Sebold'
+p169
+sS'Silent Honor'
+p170
+g2
+sS'Lake Wobegon Days'
+p171
+S'Garrison Keillor'
+p172
+sS'Star'
+p173
+g2
+sS'The Hit'
+p174
+S'David Baldacci'
+p175
+sS'Bleachers'
+p176
+g94
+sS'Dreamcatcher'
+p177
+g50
+sS'Politically Correct Bedtime Stories'
+p178
+S'James Finn Garner'
+p179
+sS'The Group'
+p180
+S'Mary McCarthy'
+p181
+sS"The Cuckoo's Calling"
+p182
+S'Robert Galbraith'
+p183
+sS'The Summons'
+p184
+g94
+sS'Northern Lights'
+p185
+g18
+sS'The Icarus Agenda'
+p186
+S'Robert Ludlum'
+p187
+sS'The Prodigal Daughter'
+p188
+S'Jeffrey Archer'
+p189
+sS'Blood Magick'
+p190
+g18
+sS'Second Honeymoon'
+p191
+S'James Patterson'
+p192
+sS'Divine Justice'
+p193
+g175
+sS'Earth and High Heaven'
+p194
+S'Gwethalyn Graham'
+p195
+sS"Sophie's Choice"
+p196
+S'William Styron'
+p197
+sS'A Wanted Man'
+p198
+S'Lee Child'
+p199
+sS'Whirlwind'
+p200
+g98
+sS'Disclosure'
+p201
+S'Michael Crichton'
+p202
+sS'Advise and Consent'
+p203
+S'Allen Drury'
+p204
+sS'Devices and Desires'
+p205
+S'P.D. James'
+p206
+sS'The Glass-Blowers'
+p207
+S'Daphne du Maurier'
+p208
+sS'The Whistler'
+p209
+g94
+sS'Dark Curse'
+p210
+S'Christine Feehan'
+p211
+sS'The Black Rose'
+p212
+S'Thomas B. Costain'
+p213
+sS'A Dance with Dragons'
+p214
+S'George R.R. Martin'
+p215
+sS'Prey'
+p216
+g202
+sS'Mary Anne'
+p217
+g208
+sS'Looking for Mr. Goodbar'
+p218
+S'Judith Rossner'
+p219
+sS'Acheron'
+p220
+S'Sherrilyn Kenyon'
+p221
+sS'Six Years'
+p222
+S'Harlan Coben'
+p223
+sS'Moscow Rules'
+p224
+g62
+sS'Smoke Screen'
+p225
+g159
+sS'Private Paris'
+p226
+S'James Patterson'
+p227
+sS'Kill Shot'
+p228
+S'Vince Flynn'
+p229
+sS'Eagle in the Sky'
+p230
+S'F. van Wyck Mason'
+p231
+sS'The 6th Target'
+p232
+S'James Patterson'
+p233
+sS'The Postcard Killers'
+p234
+S'James Patterson'
+p235
+sS'The Sum of All Fears'
+p236
+g79
+sS'The Wall'
+p237
+S'John Hersey'
+p238
+sS"The King's General"
+p239
+g208
+sS'The House'
+p240
+g2
+sS'Across the River and into the Trees'
+p241
+S'Ernest Hemingway'
+p242
+sS'The Silver Chalice'
+p243
+S'Thomas B. Costain'
+p244
+sS'The Affair'
+p245
+g199
+sS'The Horse Whisperer'
+p246
+S'Nicholas Evans'
+p247
+sS'Moonlight Becomes You'
+p248
+g77
+sS'Chesapeake'
+p249
+g48
+sS'The Odessa File'
+p250
+S'Frederick Forsyth'
+p251
+sS'The Robe'
+p252
+S'Lloyd C. Douglas'
+p253
+sS'The Quickie'
+p254
+S'James Patterson'
+p255
+sS'Treachery in Death'
+p256
+S'J.D. Robb'
+p257
+sS'The Path of Daggers'
+p258
+g81
+sS'Turbo Twenty-three'
+p259
+g54
+sS'Reflected in You'
+p260
+S'Sylvia Day'
+p261
+sS'The Lucky One'
+p262
+S'Nicholas Sparks'
+p263
+sS'The Cardinal of the Kremlin'
+p264
+g79
+sS'Thinner'
+p265
+S'Richard Bachman'
+p266
+sS'Cause of Death'
+p267
+g24
+sS'The Force Unleashed'
+p268
+S'Sean Williams'
+p269
+sS'The Collector'
+p270
+g18
+sS'The Scapegoat'
+p271
+g208
+sS'Lover At Last'
+p272
+S'J.R. Ward'
+p273
+sS'Leap of Faith'
+p274
+g2
+sS'Flood Tide'
+p275
+S'Clive Cussler'
+p276
+sS'A Day Late and a Dollar Short'
+p277
+S'Terry McMillan'
+p278
+sS'Bullseye'
+p279
+S'James Patterson'
+p280
+sS'Blue'
+p281
+g2
+sS'Memnoch the Devil'
+p282
+g165
+sS'Metro Girl'
+p283
+g54
+sS'The Defector'
+p284
+g62
+sS'Kingsblood Royal'
+p285
+S'Sinclair Lewis'
+p286
+sS'Overload'
+p287
+g56
+sS'No Place Like Home'
+p288
+g77
+sS'Dragon Tears'
+p289
+g64
+sS'The Remnant'
+p290
+S'Tim LaHaye'
+p291
+sS'X'
+p292
+g161
+sS'Alert'
+p293
+S'James Patterson'
+p294
+sS'Trinity'
+p295
+g52
+sS"From Potter's Field"
+p296
+g24
+sS'The Girl on the Train'
+p297
+S'Paula Hawkins'
+p298
+sS'The Da Vinci Code'
+p299
+g20
+sS"Oliver's Story"
+p300
+g85
+sS'I Know This Much Is True'
+p301
+g119
+sS'Servant of the Bones'
+p302
+g165
+sS'True Detectives'
+p303
+S'Jonathan Kellerman'
+p304
+sS'Simple Genius'
+p305
+g175
+sS'The Hucksters'
+p306
+S'Frederic Wakeman'
+p307
+sS'Point Blank'
+p308
+g124
+sS'The Dead Zone'
+p309
+g50
+sS'The Green Years'
+p310
+S'A.J. Cronin'
+p311
+sS'The Chosen'
+p312
+S'Chaim Potok'
+p313
+sS'The Rising'
+p314
+S'Tim LaHaye'
+p315
+sS'The Book of Life'
+p316
+S'Deborah Harkness'
+p317
+sS'Fifty Shades of Grey'
+p318
+S'E.L. James'
+p319
+sS'Tricky Twenty-Two'
+p320
+g54
+sS'From Here to Eternity'
+p321
+S'James Jones'
+p322
+sS'Scarpetta'
+p323
+g24
+sS'Beach Music'
+p324
+S'Pat Conroy'
+p325
+sS'"...And Ladies of the Club"'
+p326
+S'Helen Hooven Santmyer'
+p327
+sS'The Caine Mutiny'
+p328
+S'Herman Wouk'
+p329
+sS'Hour Game'
+p330
+g175
+sS'Nights in Rodanthe'
+p331
+g263
+sS'1st to Die'
+p332
+g116
+sS'Valley of the Dolls'
+p333
+S'Jacqueline Susann'
+p334
+sS'The Obsession'
+p335
+g18
+sS'Raintree County'
+p336
+S'Ross Lockridge Jr.'
+p337
+sS'Stone Cold'
+p338
+g175
+sS'In This Mountain'
+p339
+S'Jan Karon'
+p340
+sS'Valhalla Rising'
+p341
+g276
+sS'The Keys of the Kingdom'
+p342
+S'A.J. Cronin'
+p343
+sS'The Nanny Diaries'
+p344
+S'Emma McLaughlin'
+p345
+sS'From a Buick 8'
+p346
+g50
+sS'The Mermaid Chair'
+p347
+g31
+sS'Sole Survivor'
+p348
+g64
+sS'The Man from St. Petersburg'
+p349
+g144
+sS'Seven Days in May'
+p350
+S'Fletcher Knebel'
+p351
+sS'The Whole Truth'
+p352
+g175
+sS'Deliver us from Evil'
+p353
+g175
+sS'Cross My Heart'
+p354
+g116
+sS'Vanished'
+p355
+g351
+sS'The Establishment'
+p356
+S'Howard Fast'
+p357
+sS'Night Fall'
+p358
+S'Nelson DeMille'
+p359
+sS'The Perfect Hope'
+p360
+g18
+sS'Dark Slayer'
+p361
+g211
+sS'Birthright'
+p362
+g18
+sS'Loves Music, Loves to Dance'
+p363
+g77
+sS'The Host'
+p364
+S'Stephenie Meyer'
+p365
+sS'The King'
+p366
+S'J.R. Ward'
+p367
+sS'First Family'
+p368
+g175
+sS'Nineteen Minutes'
+p369
+g41
+sS'Live Wire'
+p370
+g223
+sS'The Story of Edgar Sawtelle'
+p371
+S'David Wroblewski'
+p372
+sS"Lisey's Story"
+p373
+g50
+sS'Raise High the Roof Beam, Carpenters'
+p374
+S'J.D. Salinger'
+p375
+sS'The Confession'
+p376
+g94
+sS'11/22/63'
+p377
+g50
+sS"The French Lieutenant's Woman"
+p378
+S'John Fowles'
+p379
+sS"The Girl in the Spider's Web"
+p380
+S'David Lagercrantz'
+p381
+sS'Fine Things'
+p382
+g2
+sS'Grey'
+p383
+S'E.L. James'
+p384
+sS'Edge of Eternity'
+p385
+g144
+sS'Radiant Angel'
+p386
+g359
+sS"Don't Go Near the Water"
+p387
+S'William Brinkley'
+p388
+sS'The Book of Fate'
+p389
+g96
+sS'Protect and Defended'
+p390
+g229
+sS'See Me'
+p391
+g263
+sS'Gone'
+p392
+S'James Patterson'
+p393
+sS'The Martian'
+p394
+S'Andy Weir'
+p395
+sS'September'
+p396
+S'Rosamunde Pilcher'
+p397
+sS'Dragon Seed'
+p398
+S'Pearl S. Buck'
+p399
+sS"Pilgrim's Inn"
+p400
+S'Elizabeth Goudge'
+p401
+sS'Missing You'
+p402
+g223
+sS"Shannon's Way"
+p403
+S'A.J. Cronin'
+p404
+sS"The View from Pompey's Head"
+p405
+S'Hamilton Basso'
+p406
+sS'Triple'
+p407
+g144
+sS'The Gate House'
+p408
+g359
+sS'The Gift'
+p409
+g2
+sS'Reckless'
+p410
+S'S.C. Stephens'
+p411
+sS'The Long Way Home'
+p412
+S'Louise Penny'
+p413
+sS'Extremely Loud and Incredibly Close'
+p414
+S'Jonathan Safran Foer'
+p415
+sS'The Gathering Storm'
+p416
+S'Robert Jordan'
+p417
+sS'1876'
+p418
+g37
+sS'So Little Time'
+p419
+g121
+sS'The Eighth Day'
+p420
+S'Thornton Wilder'
+p421
+sS'The Five People You Meet in Heaven'
+p422
+S'Mitch Albom'
+p423
+sS'Kill Alex Cross'
+p424
+g116
+sS'Blood Noir'
+p425
+S'Laurell K. Hamilton'
+p426
+sS'Firestarter'
+p427
+g50
+sS'The Beach House'
+p428
+S'James Patterson'
+p429
+sS'Once Is Not Enough'
+p430
+g334
+sS'Auntie Mame'
+p431
+S'Patrick Dennis'
+p432
+sS'Chill Factor'
+p433
+g159
+sS'Hope to Die'
+p434
+g116
+sS'Isle of Dog'
+p435
+g24
+sS'The Land of Painted Caves'
+p436
+g114
+sS'Answered Prayers'
+p437
+g2
+sS"The Razor's Edge"
+p438
+S'W. Somerset Maugham'
+p439
+sS'The Husband'
+p440
+g64
+sS'Angels Fall'
+p441
+g18
+sS"Winter's Heart"
+p442
+g81
+sS'The Bone Bed'
+p443
+g24
+sS'The Bet'
+p444
+S'Rachel Van Dyken'
+p445
+sS"Sam's Letters to Jennifer"
+p446
+g116
+sS'Memories of Midnight'
+p447
+S'Sidney Sheldon'
+p448
+sS'The Last Hurrah'
+p449
+S"Edwin O'Connor"
+p450
+sS'The Bourne Ultimatum'
+p451
+g187
+sS'Skeleton Crew'
+p452
+g50
+sS'How Stella Got Her Groove Back'
+p453
+g278
+sS'NYPD Red 4'
+p454
+S'James Patterson'
+p455
+sS'The Nightingale'
+p456
+S'Kristin Hannah'
+p457
+sS'The 9th Judgment'
+p458
+S'James Patterson'
+p459
+sS'Unlucky 13'
+p460
+g116
+sS'Taltos'
+p461
+g165
+sS'Executive Orders'
+p462
+g79
+sS'Daddy'
+p463
+g2
+sS'Harry Potter and the Prisoner of Azkaban'
+p464
+S'J.K. Rowling'
+p465
+sS'A Lion is in the Streets'
+p466
+S'Adria Locke Langley'
+p467
+sS"Hell's Corner"
+p468
+g175
+sS'The Satanic Verses'
+p469
+S'Salman Rushdie'
+p470
+sS'The Lost World'
+p471
+g202
+sS'Words of Radiance'
+p472
+S'Brandon Sanderson'
+p473
+sS'The Rembrandt Affair'
+p474
+g62
+sS'The Burning Room'
+p475
+S'Michael Connelly'
+p476
+sS'Friction'
+p477
+g159
+sS'Beyond This Place'
+p478
+S'A.J. Cronin'
+p479
+sS'Notorious Nineteen'
+p480
+g54
+sS'Harry Potter and the Chamber of Secrets'
+p481
+S'J.K. Rowling'
+p482
+sS'The Spy Who Came in from the Cold'
+p483
+g135
+sS'Wicked Prey'
+p484
+g12
+sS'"P" Is for Peril'
+p485
+g161
+sS'End of Watch'
+p486
+g50
+sS"I'll Take Manhattan"
+p487
+S'Judith Krantz'
+p488
+sS'A Thousand Splendid Suns'
+p489
+S'Khaled Hosseini'
+p490
+sS'Red Storm Rising'
+p491
+g79
+sS'Tick Tock'
+p492
+g116
+sS'Gray Mountain'
+p493
+g94
+sS'The Mark'
+p494
+S'Tim LaHaye'
+p495
+sS'Worst Case'
+p496
+g116
+sS'The Indwelling'
+p497
+S'Tim LaHaye'
+p498
+sS'House Divided'
+p499
+S'Ben Ames Williams'
+p500
+sS'East River'
+p501
+S'Sholem Asch'
+p502
+sS'Fool me once'
+p503
+g223
+sS'Presumed Innocent'
+p504
+S'Scott Turow'
+p505
+sS'Skipping Christmas'
+p506
+g94
+sS'Change of Heart'
+p507
+g41
+sS'The Brethren'
+p508
+g94
+sS'Predator'
+p509
+g24
+sS'A Shade of Difference'
+p510
+g204
+sS'And Now Tomorrow'
+p511
+S'Rachel Field'
+p512
+sS'Midnight Bayou'
+p513
+g18
+sS'At Risk'
+p514
+g24
+sS'Invisible'
+p515
+g116
+sS'Just Take My Heart'
+p516
+g77
+sS'Celebrity in Death'
+p517
+S'J.D. Robb'
+p518
+sS'Anatomy of a Murder'
+p519
+S'Robert Traver'
+p520
+sS'From the Corner of His Eye'
+p521
+g64
+sS'The Burden of Proof'
+p522
+g505
+sS'The Naked and the Dead'
+p523
+S'Norman Mailer'
+p524
+sS'Hawaii'
+p525
+g48
+sS'Cross the Line'
+p526
+g116
+sS'The Games'
+p527
+S'James Patterson'
+p528
+sS'Sleeping Murder'
+p529
+S'Agatha Christie'
+p530
+sS'The Best of Me'
+p531
+g263
+sS'Heartbeat'
+p532
+g2
+sS'D\xc3\xa9sir\xc3\xa9e'
+p533
+S'Annemarie Selinko'
+p534
+sS'Relentless'
+p535
+g64
+sS'A Memory of Light'
+p536
+S'Robert Jordan'
+p537
+sS'The Dark Half'
+p538
+g50
+sS'Honeymoon'
+p539
+S'James Patterson'
+p540
+sS'My Cousin Rachel'
+p541
+g208
+sS'"N" Is for Noose'
+p542
+g161
+sS'The Last Patriot'
+p543
+g60
+sS'"Q" Is for Quarry'
+p544
+g161
+sS'Concealed in Death'
+p545
+S'J.D. Robb'
+p546
+sS'Compulsion'
+p547
+g304
+sS'Armageddon'
+p548
+S'Tim LaHaye'
+p549
+sS'Slow Waltz in Cedar Bend'
+p550
+S'Robert James Waller'
+p551
+sS'Strange Fruit'
+p552
+S'Lillian E. Smith'
+p553
+sS'Gone Girl'
+p554
+S'Gillian Flynn'
+p555
+sS'The Arrangement'
+p556
+S'Elia Kazan'
+p557
+sS'The Cardinal'
+p558
+S'Henry Morton Robinson'
+p559
+sS'Winter Solstice'
+p560
+g397
+sS'The Gods of Guilt'
+p561
+g476
+sS"Smokin' Seventeen"
+p562
+g54
+sS'Jonathan Livingston Seagull'
+p563
+S'Richard Bach'
+p564
+sS'Paradise'
+p565
+S'Toni Morrison'
+p566
+sS'Drowning Ruth'
+p567
+S'Christina Schwarz'
+p568
+sS'Home Front'
+p569
+g457
+sS'Airframe'
+p570
+g202
+sS'Captivated by You'
+p571
+g261
+sS'The Christmas Sweater'
+p572
+S'Glenn Beck'
+p573
+sS'The Long Road Home'
+p574
+g2
+sS'A Rage To Live'
+p575
+S"John O'Hara"
+p576
+sS'Journey Through Heartsongs'
+p577
+S'Mattie J.T. Stepanek'
+p578
+sS'Entwined With You'
+p579
+g261
+sS'Last of the Breed'
+p580
+g167
+sS'Fantasy in Death'
+p581
+S'J.D. Robb'
+p582
+sS'Hold Tight'
+p583
+g223
+sS'Hot Six'
+p584
+g54
+sS'The Gangster'
+p585
+S'Clive Cussler'
+p586
+sS'Accident'
+p587
+g2
+sS'Gone Tomorrow'
+p588
+g199
+sS'Finders Keepers'
+p589
+g50
+sS'The Fifth Witness'
+p590
+g476
+sS'The Fourth Protocol'
+p591
+g251
+sS'Ten Big Ones'
+p592
+g54
+sS'The Target'
+p593
+g175
+sS'The Teeth of the Tiger'
+p594
+g79
+sS'On the Street Where You Live'
+p595
+g77
+sS'Ford County'
+p596
+g94
+sS'Shadowfever'
+p597
+S'Karen Marie Moning'
+p598
+sS'Southern Cross'
+p599
+g24
+sS'The Drop'
+p600
+g476
+sS'Intensity'
+p601
+g64
+sS'The Word'
+p602
+S'Irving Wallace'
+p603
+sS'The Goldfinch'
+p604
+S'Donna Tartt'
+p605
+sS'Judge and Jury'
+p606
+S'James Patterson'
+p607
+sS'Joy Street'
+p608
+S'Frances Parkinson Keyes'
+p609
+sS'"U" Is for Undertow'
+p610
+g161
+sS'The Egyptian'
+p611
+S'Mika Waltari'
+p612
+sS'2nd Chance'
+p613
+S'James Patterson'
+p614
+sS'Debt of Honor'
+p615
+g79
+sS'Unnatural Exposure'
+p616
+g24
+sS'Turn Coat'
+p617
+g127
+sS'Walking Disaster'
+p618
+S'Jamie McGuire'
+p619
+sS'The Confessions of Nat Turner'
+p620
+g197
+sS'Memory Man'
+p621
+g175
+sS'One with you'
+p622
+g261
+sS'The Parsifal Mosaic'
+p623
+g187
+sS'Scarlett'
+p624
+S'Alexandra Ripley'
+p625
+sS"Oh, the Places You'll Go!"
+p626
+S'Dr. Seuss'
+p627
+sS'Towers of Midnight'
+p628
+S'Robert Jordan'
+p629
+sS'The Godfather'
+p630
+S'Mario Puzo'
+p631
+sS'The Bourne Identity'
+p632
+g187
+sS'The Secret Pilgrim'
+p633
+g135
+sS'Insomnia'
+p634
+g50
+sS'The Gabriel Hounds'
+p635
+S'Mary Stewart'
+p636
+sS'Texas'
+p637
+g48
+sS'The Overton Window'
+p638
+g573
+sS'Freedom'
+p639
+g16
+sS'Lord Vanity'
+p640
+g104
+sS'I Heard That Song Before'
+p641
+g77
+sS'Mr. Mercedes'
+p642
+g50
+sS'The Aquitaine Progression'
+p643
+g187
+sS'The Survivor'
+p644
+S'Vince Flynn'
+p645
+sS'You Belong to Me'
+p646
+g77
+sS'Dear John'
+p647
+g263
+sS'The Ides of March'
+p648
+g421
+sS'Black Ops'
+p649
+S'W.E.B. Griffin'
+p650
+sS'Polar Star'
+p651
+g157
+sS'A Feast for Crows'
+p652
+S'George R.R. Martin'
+p653
+sS'The Hotel New Hampshire'
+p654
+g132
+sS'Special Delivery'
+p655
+g2
+sS'The Tommyknockers'
+p656
+g50
+sS'Shopaholic and Baby'
+p657
+S'Sophie Kinsella'
+p658
+sS'Swimsuit'
+p659
+S'James Patterson'
+p660
+sS'Four Past Midnight'
+p661
+g50
+sS'Odd Hours'
+p662
+g64
+sS'The Runaway Jury'
+p663
+g94
+sS'Fall of Giants'
+p664
+g144
+sS'The Crossing'
+p665
+g476
+sS'Red Mist'
+p666
+g24
+sS'Sycamore Row'
+p667
+g94
+sS'The Last of the Just'
+p668
+S'Andr\xc3\xa9 Schwarz-Bart'
+p669
+sS'Centennial'
+p670
+g48
+sS'Full Circle'
+p671
+g2
+sS'The Diary of Ellen Rimbauer'
+p672
+S'Joyce Reardon'
+p673
+sS'Master of the Game'
+p674
+g448
+sS'Naked Prey'
+p675
+g12
+sS'Scandalous Behavior'
+p676
+S'Stuart Woods'
+p677
+sS'This Side of Innocence'
+p678
+S'Taylor Caldwell'
+p679
+sS'An Indecent Obsession'
+p680
+S'Colleen McCullough'
+p681
+sS'Zero Day'
+p682
+g175
+sS'The Last Precinct'
+p683
+g24
+sS'The Passions of the Mind'
+p684
+S'Irving Stone'
+p685
+sS'The Day of the Jackal'
+p686
+g251
+sS'Brotherhood In Death'
+p687
+S'J.D. Robb'
+p688
+sS'Arch of Triumph'
+p689
+S'Erich Maria Remarque'
+p690
+sS'The Sands of Time'
+p691
+g448
+sS'Up the Down Staircase'
+p692
+S'Bel Kaufman'
+p693
+sS'Forever Amber'
+p694
+S'Kathleen Winsor'
+p695
+sS'Something of Value'
+p696
+S'Robert Ruark'
+p697
+sS'Me Before You'
+p698
+S'Jojo Moyes'
+p699
+sS'Doctor Sleep'
+p700
+g50
+sS'Curtain'
+p701
+g530
+sS'Polar Shift'
+p702
+S'Clive Cussler'
+p703
+sS'The Wrong Side of Goodbye'
+p704
+g476
+sS'The King of Torts'
+p705
+g94
+sS'The Bourne Supremacy'
+p706
+g187
+sS'Bonjour Tristesse'
+p707
+S'Fran\xc3\xa7oise Sagan'
+p708
+sS'Something Happened'
+p709
+S'Joseph Heller'
+p710
+sS'The Appeal'
+p711
+g94
+sS'Cometh the hour'
+p712
+g189
+sS'Step on a Crack'
+p713
+g116
+sS'While My Pretty One Sleeps'
+p714
+g77
+sS'Dolores Claiborne'
+p715
+g50
+sS'Plum Lucky'
+p716
+g54
+sS'Caught'
+p717
+g223
+sS'The Black Box'
+p718
+g476
+sS'Chosen Prey'
+p719
+g12
+sS'The Moneyman'
+p720
+S'Thomas B. Costain'
+p721
+sS'The Lake House'
+p722
+g116
+sS'The Hostage'
+p723
+S'W.E.B. Griffin'
+p724
+sS'Seven Up'
+p725
+g54
+sS'Bloodline'
+p726
+g448
+sS'Cross'
+p727
+g116
+sS'The Love Machine'
+p728
+g334
+sS'Poland'
+p729
+g48
+sS'The Street Lawyer'
+p730
+g94
+sS'The Last Enchantment'
+p731
+g636
+sS'61 Hours'
+p732
+g199
+sS'The Holcroft Covenant'
+p733
+g187
+sS'Apprentice in Death'
+p734
+S'J.D. Robb'
+p735
+sS'Misery'
+p736
+g50
+sS'Book of the Dead'
+p737
+g24
+sS"Mistral's Daughter"
+p738
+g488
+sS'The Winds of War'
+p739
+g329
+sS'W is for Wasted'
+p740
+g161
+sS'Festive in Death'
+p741
+S'J.D. Robb'
+p742
+sS'East Side, West Side'
+p743
+S'Marcia Davenport'
+p744
+sS'Herzog'
+p745
+S'Saul Bellow'
+p746
+sS'The Tale of the Body Thief'
+p747
+g165
+sS'The Haunted Mesa'
+p748
+g167
+sS'Duma Key'
+p749
+g50
+sS'Bittersweet'
+p750
+g2
+sS'Night School'
+p751
+g199
+sS'The Moon Is Down'
+p752
+S'John Steinbeck'
+p753
+sS'The Girl Who Played with Fire'
+p754
+S'Stieg Larsson'
+p755
+sS'The Shoes of the Fisherman'
+p756
+S'Morris L. West'
+p757
+sS'Extreme Measures'
+p758
+g229
+sS'Whiskey Beach'
+p759
+g18
+sS'The Racketeer'
+p760
+g94
+sS'The Parasites'
+p761
+g208
+sS'Truly Madly Guilty'
+p762
+S'Liane Moriarty'
+p763
+sS'Five Days in Paris'
+p764
+g2
+sS'The Scarecrow'
+p765
+g476
+sS"Pretend You Don't See Her"
+p766
+g77
+sS'The Hollow Hills'
+p767
+g636
+sS'Desecration'
+p768
+S'Tim LaHaye'
+p769
+sS'Marjorie Morningstar'
+p770
+g329
+sS'The Agony and the Ecstasy'
+p771
+g685
+sS'American Assassin'
+p772
+g229
+sS'Beach Road'
+p773
+S'James Patterson'
+p774
+sS'The Moneychangers'
+p775
+g56
+sS'Now You See Her'
+p776
+S'James Patterson'
+p777
+sS'By Love Possessed'
+p778
+S'James Gould Cozzens'
+p779
+sS'Falconer'
+p780
+S'John Cheever'
+p781
+sS'Mary, Mary'
+p782
+g116
+sS'Go Set a Watchman'
+p783
+S'Harper Lee'
+p784
+sS'The Help'
+p785
+S'Kathryn Stockett'
+p786
+sS'Under the Dome'
+p787
+g50
+sS'12th of Never'
+p788
+S'James Patterson'
+p789
+sS'Water for Elephants'
+p790
+S'Sara Gruen'
+p791
+sS'The Girl Who Loved Tom Gordon'
+p792
+g50
+sS'The Jester'
+p793
+S'James Patterson'
+p794
+sS'True Believer'
+p795
+g263
+sS'Calculated in Death'
+p796
+g735
+sS'Search'
+p797
+g18
+sS'A Widow for One Year'
+p798
+g132
+sS'The House on Hope Street'
+p799
+g2
+sS'Night Broken'
+p800
+g73
+sS'Airport'
+p801
+g56
+sS'The Lincoln Lawyer'
+p802
+g476
+sS'Three Fates'
+p803
+g18
+sS'15th Affair'
+p804
+S'James Patterson'
+p805
+sS'Private L.A.'
+p806
+S'James Patterson'
+p807
+sS'Kaleidoscope'
+p808
+g2
+sS'Mrs. Parkington'
+p809
+S'Louis Bromfield'
+p810
+sS'Double Cross'
+p811
+g116
+sS'Trace'
+p812
+g24
+sS'Good as Gold'
+p813
+g710
+sS'It'
+p814
+g50
+sS'The Closers'
+p815
+g476
+sS'Gone (Alex Delaware, #20)'
+p816
+g304
+sS'Playing for Pizza'
+p817
+g94
+sS'The Associate'
+p818
+g94
+sS'Plum Spooky'
+p819
+g54
+sS'Black House'
+p820
+S'Stephen King'
+p821
+sS'The Reversal'
+p822
+g476
+sS'The Girl with the Dragon Tattoo'
+p823
+g755
+sS'The Last Mile'
+p824
+g175
+sS'Bag of Bones'
+p825
+g50
+sS"The Kitchen God's Wife"
+p826
+S'Amy Tan'
+p827
+sS'Patriot Games'
+p828
+g79
+sS'The Honorary Consul'
+p829
+S'Graham Greene'
+p830
+sS'The Rescue'
+p831
+g263
+sS'Carnal Curiosity'
+p832
+g677
+sS'The Pelican Brief'
+p833
+g94
+sS'Breakfast of Champions'
+p834
+S'Kurt Vonnegut'
+p835
+sS'Rising Sun'
+p836
+g202
+sS'Star Wars Episode I: The Phantom Menace'
+p837
+S'Terry Brooks'
+p838
+sS"Suzanne's Diary for Nicholas"
+p839
+g116
+sS'One Door Away from Heaven'
+p840
+g64
+sS'Takedown Twenty'
+p841
+g54
+sS'Four Blind Mice'
+p842
+g116
+sS'Dark Witch'
+p843
+g18
+sS'Windmills of the Gods'
+p844
+g448
+sS'The Chance'
+p845
+S'Robyn Carr'
+p846
+sS'Hideaway'
+p847
+g64
+sS'Bad Moon Rising'
+p848
+g221
+sS'East of Eden'
+p849
+g753
+sS'Shadow Spell'
+p850
+g18
+sS"Plum Lovin'"
+p851
+g54
+sS'A Painted House'
+p852
+g94
+sS"Harry Potter and the Philosopher's Stone"
+p853
+S'J.K. Rowling'
+p854
+sS'Top Secret Twenty-One'
+p855
+g54
+sS'The Kiss'
+p856
+g2
+sS'The Secret of Santa Vittoria'
+p857
+S'Robert Crichton'
+p858
+sS'A Tree Grows in Brooklyn'
+p859
+S'Betty  Smith'
+p860
+sS'Cross Country'
+p861
+g116
+sS"Gentlemen's Agreement"
+p862
+S'Laura Z. Hobson'
+p863
+sS"Portnoy's Complaint"
+p864
+S'Philip Roth'
+p865
+sS'Peyton Place'
+p866
+S'Grace Metalious'
+p867
+sS'The Shadow of Your Smile'
+p868
+g77
+sS'The Stars Shine Down'
+p869
+g448
+sS'So Well Remembered'
+p870
+S'James Hilton'
+p871
+sS'Scruples'
+p872
+g488
+sS'Clear and Present Danger'
+p873
+g79
+sS'Pet Sematary'
+p874
+g50
+sS'Cross Justice'
+p875
+g116
+sS"Finger Lickin' Fifteen"
+p876
+g54
+sS'The Partner'
+p877
+g94
+sS'Just One Evil Act'
+p878
+S'Elizabeth George'
+p879
+sS'The Plains of Passage'
+p880
+g114
+sS'Storm Front'
+p881
+g12
+sS'"S" Is for Silence'
+p882
+g161
+sS'The Big Fisherman'
+p883
+S'Lloyd C. Douglas'
+p884
+sS'The Eyes of the Dragon'
+p885
+g50
+sS'Port Mortuary'
+p886
+g24
+sS'14th Deadly Sin'
+p887
+g116
+sS'The Chamber'
+p888
+g94
+sS'The Hero'
+p889
+g846
+sS'Primary Colors'
+p890
+S'Anonymous\nLater revealed to be Joe Klein'
+p891
+sS'Twelve Sharp'
+p892
+g54
+sS'Desperation'
+p893
+g50
+sS'The Bridges of Madison County'
+p894
+g551
+sS'Andersonville'
+p895
+S'MacKinlay Kantor'
+p896
+sS'Dead in the Family'
+p897
+g6
+sS'Red Rabbit'
+p898
+g79
+sS'A Great Reckoning'
+p899
+g413
+sS'Song of Susannah'
+p900
+g50
+sS'Winter of the World'
+p901
+g144
+sS"Sundays at Tiffany's"
+p902
+S'James Patterson'
+p903
+sS'Tribute'
+p904
+g18
+sS'Inferno'
+p905
+g20
+sS'Windswept'
+p906
+S'Mary Ellen Chase'
+p907
+sS'Couples'
+p908
+S'John Updike'
+p909
+sS'QB VII'
+p910
+g52
+sS'Lydia Bailey'
+p911
+S'Kenneth Roberts'
+p912
+sS'Unaccustomed Earth'
+p913
+S'Jhumpa Lahiri'
+p914
+sS'Rage of Angels'
+p915
+g448
+sS'Ragtime'
+p916
+S'E.L. Doctorow'
+p917
+sS'Best Friends Forever'
+p918
+S'Jennifer Weiner'
+p919
+sS'The Last Man'
+p920
+g229
+sS'If Tomorrow Comes'
+p921
+g448
+sS'Personal'
+p922
+g199
+sS'The Brass Verdict'
+p923
+g476
+sS'Promises in Death'
+p924
+S'J.D. Robb'
+p925
+sS'Anansi Boys'
+p926
+S'Neil Gaiman'
+p927
+sS'The Little Drummer Girl'
+p928
+g135
+sS'The Cider House Rules'
+p929
+g132
+sS'War and Remembrance'
+p930
+g329
+sS'Cold Fire'
+p931
+g64
+sS'4th of July'
+p932
+S'James Patterson'
+p933
+sS'Different Seasons'
+p934
+g50
+sS'Rogue Lawyer'
+p935
+g94
+sS"The Wise Man's Fear"
+p936
+S'Patrick Rothfuss'
+p937
+sS'Gathering Prey'
+p938
+g12
+sS'Heir to the Empire'
+p939
+S'Timothy Zahn'
+p940
+sS'Lean Mean Thirteen'
+p941
+g54
+sS'Outlander'
+p942
+g22
+sS'Revival'
+p943
+g50
+sS'The Litigators'
+p944
+g94
+sS"You've Been Warned"
+p945
+S'James Patterson'
+p946
+sS'The Longest Ride'
+p947
+g263
+sS'Before I Say Good-Bye'
+p948
+g77
+sS'The Stand'
+p949
+g50
+sS'The Dark Tower'
+p950
+g50
+sS'Big Little Lies'
+p951
+g763
+sS'8th Confession'
+p952
+S'James Patterson'
+p953
+sS'World Without End'
+p954
+g144
+sS"We'll Meet Again"
+p955
+g77
+sS'Devil Bones'
+p956
+S'Kathy Reichs'
+p957
+sS'The Rector of Justin'
+p958
+S'Louis Auchincloss'
+p959
+sS'The Matarese Circle'
+p960
+g187
+sS'Private: #1 Suspect'
+p961
+S'James Patterson'
+p962
+sS'Glorious Appearing'
+p963
+S'Tim LaHaye'
+p964
+sS"Frenchman's Creek"
+p965
+g208
+sS'Where Are You Now?'
+p966
+g77
+sS'Exodus'
+p967
+g52
+sS"Drivin' Woman"
+p968
+S'Elizabeth Pickett Chevalier'
+p969
+sS'The Klone and I'
+p970
+g2
+sS'A Man in Full'
+p971
+g146
+sS"Hornet's Nest"
+p972
+g24
+sS'The Bad Place'
+p973
+g64
+sS'Explosive Eighteen'
+p974
+g54
+sS'Nothing to lose'
+p975
+g199
+sS'Two Little Girls in Blue'
+p976
+g77
+sS'The Rainmaker'
+p977
+g94
+sS'Cross Fire'
+p978
+g116
+sS'Plum Island'
+p979
+g359
+sS'I, Alex Cross'
+p980
+g116
+sS'The Mammoth Hunters'
+p981
+g114
+sS'The Disenchanted'
+p982
+S'Budd Schulberg'
+p983
+sS'The Sicilian'
+p984
+g631
+sS'Alex Cross, Run'
+p985
+g116
+sS'Hold the Dream'
+p986
+S'Barbara Taylor Bradford'
+p987
+sS'Sincerely, Willis Wayde'
+p988
+g121
+sS'"T" Is for Trespass'
+p989
+g161
+sS'Ship of Fools'
+p990
+S'Katherine Anne Porter'
+p991
+sS'The Thorn Birds'
+p992
+g681
+sS'A Common Life'
+p993
+g340
+sS'Safe Haven'
+p994
+g263
+sS'The Exorcist'
+p995
+S'William Peter Blatty'
+p996
+sS'Extreme Prey'
+p997
+g12
+sS'Green Dolphin Street'
+p998
+g401
+sS'Who Killed the Robins Family?'
+p999
+S'Thomas Chastain'
+p1000
+sS'First Among Equals'
+p1001
+g189
+sS'Star Wars: Return of the Jedi \xe2\x80\x93 The Storybook Based on the Movie'
+p1002
+S'Joan D. Vinge'
+p1003
+sS'South of Broad'
+p1004
+g325
+sS'Hard Eight'
+p1005
+g54
+sS'Watership Down'
+p1006
+S'Richard Adams'
+p1007
+sS'London Bridges'
+p1008
+g116
+sS'Fire Touched'
+p1009
+g73
+sS'Lolita'
+p1010
+S'Vladimir Nabokov'
+p1011
+sS'The Christmas Box'
+p1012
+S'Richard Paul Evans'
+p1013
+sS'The Young Lions'
+p1014
+S'Irwin Shaw'
+p1015
+sS'Space'
+p1016
+g48
+sS'Threat Vector'
+p1017
+g79
+sS'House Rules'
+p1018
+g41
+sS'The Last Song'
+p1019
+g263
+sS'"L" Is for Lawless'
+p1020
+g161
+sS'To the Nines'
+p1021
+g54
+sS'Eleven on Top'
+p1022
+g54
+sS'Blow Fly'
+p1023
+g24
+sS'Dead and Gone'
+p1024
+g6
+sS"Smiley's People"
+p1025
+g135
+sS'Love is Eternal'
+p1026
+g685
+sS'Fearless Fourteen'
+p1027
+g54
+sS'Remember Me'
+p1028
+g77
+sS"The Girl Who Kicked the Hornets' Nest"
+p1029
+g755
+sS'Chesapeake Blue'
+p1030
+g18
+sS'The Ghost'
+p1031
+g2
+sS'Skin Trade'
+p1032
+g426
+sS"Gerald's Game"
+p1033
+g50
+sS'Never Go Back'
+p1034
+g199
+sS'Island of Glass'
+p1035
+g18
+sS'A Breath of Snow and Ashes'
+p1036
+g22
+sS'Princess Daisy'
+p1037
+g488
+sS'At First Sight'
+p1038
+g263
+sS'Innocent in Death'
+p1039
+S'J.D. Robb'
+p1040
+sS'The Casual Vacancy'
+p1041
+S'J.K. Rowling'
+p1042
+sS'The Bear and the Dragon'
+p1043
+g79
+sS'Black Hills'
+p1044
+g18
+sS'Jailbird'
+p1045
+g835
+sS'For One More Day'
+p1046
+g423
+sS'3rd Degree'
+p1047
+S'James Patterson'
+p1048
+sS'Lie Down with Lions'
+p1049
+g144
+sS'The Testament'
+p1050
+g94
+sS'Long Lost'
+p1051
+g223
+sS'Make Me'
+p1052
+g199
+sS'The Russia House'
+p1053
+g135
+sS'Worth Dying For'
+p1054
+g199
+sS'Hidden Order'
+p1055
+g60
+sS'Skin Game'
+p1056
+g127
+sS'The Children of H\xc3\xbarin'
+p1057
+S'J.R.R. Tolkien'
+p1058
+sS'Private'
+p1059
+g116
+sS'Morning Star'
+p1060
+S'Pierce Brown'
+p1061
+sS'Bay of Sighs'
+p1062
+g18
+s.
