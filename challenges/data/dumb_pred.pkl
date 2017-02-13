@@ -1,0 +1,4 @@
+c__main__
+dumb_pred
+p0
+.
