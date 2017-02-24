@@ -1,1 +1,2 @@
 finalfile.txt filter=lfs diff=lfs merge=lfs -text
+*.database filter=lfs diff=lfs merge=lfs -text
