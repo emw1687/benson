@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge 10-1</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+      /*css to go here*/
+    </style>
+  </head>
+  <body>
+    <h1>Make an SVG with five circles, ordered randomly across the SVG. (Hint: Math.random())</h1>
+    <script>
+      
+      function get_random_center(min, max) {
+        return Math.random() * (max-min) + min;
+      }
+
+      var bodySelection = d3.select("body");
+
+      var svgSelection = bodySelection.append("svg")
+                                      .attr("width", 500)
+                                      .attr("height", 500);
+
+      var circles = new Array(5);
+      var size = 30;
+
+      var cxs = []
+      var cys = []
+      for (i = 0; i <= circles.length; i++) {
+        cys.push(get_random_center(70, 350))
+        cxs.push(get_random_center(70, 350))
+      }
+
+      var circleSelection = svgSelection.selectAll("circle")
+                                        .data(circles)
+                                        .enter()
+                                        .append("circle")
+                                        .attr("cx", function(d, i) { circles[i] = 0; return cxs[i]})
+                                        .attr("cy", function(d, i) { circles[i] = 0; return cys[i]})
+                                        .attr("r", size)
+                                        .style("fill", "purple")
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge 10-1</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+      /*css to go here*/
+    </style>
+  </head>
+  <body>
+    <h1>Make a triangle with yellow fill and a blue border.</h1>
+    <script>
+      
+      var triangles = new Array(1)
+
+      var bodySelection = d3.select("body");
+
+      var svgSelection = bodySelection.append("svg")
+                                      .attr("width", 500)
+                                      .attr("height", 500);
+
+      var triangleSelection = svgSelection.selectAll("polygon")
+                                          .data(triangles)
+                                          .enter()
+                                          .append("polygon")
+                                          .attr("fill", "yellow")
+                                          .attr("stroke", "blue")
+                                          .attr("stroke-width", "2")
+                                          .attr("points", "100,300 150,100 350,200")
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge 10-1</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+      /*css to go here*/
+    </style>
+  </head>
+  <body>
+    <h1>Make an SVG with five circles, each with a different color, using data.</h1>
+    <script>
+      
+      var bodySelection = d3.select("body");
+
+      var svgSelection = bodySelection.append("svg")
+                                      .attr("width", 500)
+                                      .attr("height", 500);
+
+      var circles = new Array(5);
+      var cxs = [70, 140, 210, 280, 350]
+      var colors = ["red", "orange", "yellow", "green", "blue"]
+      var size = 30;
+
+      var circleSelection = svgSelection.selectAll("circle")
+                                        .data(circles)
+                                        .enter()
+                                        .append("circle")
+                                        .attr("cx", function(d, i) { circles[i] = 0; return cxs[i]})
+                                        .attr("cy", 30)
+                                        .attr("r", size)
+                                        .style("fill", function(d, i) {return colors[i]})
+
+    </script>
+  </body>
+</html>
