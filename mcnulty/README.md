@@ -1,56 +1,42 @@
-mcnulty
-==============================
+## [Don't Poison Our Kids](https://github.com/emw1687/metis_projects/blob/master/mcnulty/presentation.pdf)
+### Flint: A Cautionary Tale
 
-A short description of the project.
+#### Summary
+In April 2014, the City of Flint switched their water source from the Detroit water system to the Flint River. A year and a half later, the city switched the source was switched back, but by that time, residents had been exposed to dangerous levels of lead and other contaminants in their drinking water.
 
-Project Organization
-------------
+As an environmental engineer by training and practice as well as a former AmeriCorps member and public servant, I was very interested in piecing together how this could have happened: my hypothesis is that Flint was at the center of a perfect storm of aging physical infrastructure, a mismanaged public water supply, and socio-economic characteristics.
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+Because the Massachusetts Department of Environmental Protection has initiated an assistance program with public schools, drinking water quality data from schools across the state is available. With the Flint framework in mind, I built models to explore the relationship between physical infrastructure, public water supply management indicators, and socio-economic characteristics and drinking water quality in Massachusetts public schools.
 
+Thankfully, in Massachusetts, physical infrastructure is most influential factor in predicting water quality.
 
---------
+![Random Forest Features](https://emw1687.github.io/images/rf_features.png?raw=true)
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+#### Tools
+* [QGIS](http://www.qgis.org/en/site/)
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+* [Pandas](http://pandas.pydata.org/)
+* [Seaborn](http://seaborn.pydata.org/index.html)
+* [Scikit-learn](http://scikit-learn.org/stable/)
+
+#### Data Sources
+[MassDEP](http://www.mass.gov/eea/agencies/massdep/)
+* [Lead & Copper Rule - Public Water Systems 90th Percentile Lead Sampling Results](http://www.mass.gov/eea/agencies/massdep/water/drinking/public-water-systems-lead-90th-lead-sampling-results.html)
+* [Lead and Copper in School Drinking Water Sampling Results](http://www.mass.gov/eea/agencies/massdep/water/drinking/lead-and-copper-in-school-drinking-water-sampling-results.html)
+* [Lead and Copper Rule (LCR) Survey Results](http://www.mass.gov/eea/agencies/massdep/water/drinking/lead-in-drinking-water.html)
+* [MA Public Water Supplier Contacts Sorted by Town](http://www.mass.gov/eea/agencies/massdep/water/drinking/public-water-systems-lead-90th-lead-sampling-results.html)
+
+[MassGIS](http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/)
+* [Public Water Supplies](http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/pws.html)
+* [Level 3 Assessors’ Parcel Mapping](http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/l3parcels.html)
+* [Schools (Pre-K through High School)](http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/schools.html)
+* [2010 U.S. Census - Environmental Justice Populations](http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/cen2010ej.html)
+* [MassDEP Hydrography (1:25,000)](http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/hd.html)
+
+#### Pipeline
+1. Use QGIS to merge schools data with parcels data
+2. [Clean MassDEP School Drinking Water Sampling Results and merge with school building and environmental justice data](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/01_MassDEP_School_Sampling_cleaning.ipynb)
+3. [Scrape and clean](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/02_MWRA_scraping_and_cleaning.ipynb) [MWRA data](http://www.mwra.state.ma.us/02org/html/whatis.htm)
+4. [Create management indicators and merge with consolidated public water supply data] ](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/03_PWS_Cleaning.ipynb)
+5. [Preprocesses features and target for modeling](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/04_Make_features_target.ipynb)
+6. [Create models and tune parameters](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/05_MassDEP_School_Sampling_models.ipynb)
