@@ -1,56 +1,25 @@
-luther
-==============================
+## [The New York Times Bestsellers List is stupid.](https://github.com/emw1687/metis_projects/blob/master/luther/presentation.pdf)
+### Can data from the NYT Bestseller List help us to predict something useful about a book?
 
-Metis Project 2
+#### Summary
+An author of bestselling books himself, [Seth Godin](http://www.sethgodin.com/sg/) has argued that there is no mainstream “cultural radar” today but rather many niche sectors. Due to this phenomenon, lists such as the New York Times (NYT) Bestseller List are not actually a reflection of what’s popular in the culture at large, but rather a reflection of what’s popular in several niche subcultures.
 
-Project Organization
-------------
+For my second project at Metis, I used web scraping and linear regression to try to find out: is Seth Godin right?
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+Based on the results of my model, he just might be.
+
+![Mean rating](https://emw1687.github.io/images/rmse.png?raw=true)
 
 
---------
+#### Tools
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+* [Goodreads API](https://www.goodreads.com/api)
+* [Pandas](http://pandas.pydata.org/)
+* [Seaborn](http://seaborn.pydata.org/index.html)
+* [Statsmodel](http://statsmodels.sourceforge.net/)
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+#### Pipeline
+1. [Scrape](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/01_wikipedia_scraping.ipynb) and [clean](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/02_wikipedia_cleaning.ipynb) data from wikipedia pages listing NYT #1 bestsellers from 1942-2016
+2. [Retrieve](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/03_goodreads_api.ipynb) and [clean](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/04_goodreads_cleaning.ipynb) data about each NYT #1 bestseller using the goodreads API
+3. [Explore and visualize the data set](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/05_nyt_eda.ipynb)
+4. [Create linear regression model to predict average book rating ](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/06_nyt_models_back_to_basics.ipynb)
