@@ -4,4 +4,4 @@
 */**/*.sqlite
 *.ipynb_*
 ./**/*.ipynb_*
-./fletcher/.twitter_config
+./**/.twitter_config
