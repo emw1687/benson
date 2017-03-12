@@ -37,6 +37,6 @@ Thankfully, in Massachusetts, physical infrastructure is most influential factor
 1. Use QGIS to merge schools data with parcels data
 2. [Clean MassDEP School Drinking Water Sampling Results and merge with school building and environmental justice data](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/01_MassDEP_School_Sampling_cleaning.ipynb)
 3. [Scrape and clean](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/02_MWRA_scraping_and_cleaning.ipynb) [MWRA data](http://www.mwra.state.ma.us/02org/html/whatis.htm)
-4. [Create management indicators and merge with consolidated public water supply data] ](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/03_PWS_Cleaning.ipynb)
+4. [Create management indicators and merge with consolidated public water supply data](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/03_PWS_Cleaning.ipynb)
 5. [Preprocesses features and target for modeling](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/04_Make_features_target.ipynb)
 6. [Create models and tune parameters](https://github.com/emw1687/metis_projects/blob/master/mcnulty/notebooks/05_MassDEP_School_Sampling_models.ipynb)
