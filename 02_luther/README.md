@@ -1,4 +1,4 @@
-## [The New York Times Bestsellers List is stupid.](https://github.com/emw1687/metis_projects/blob/master/luther/presentation.pdf)
+## [The New York Times Bestsellers List is stupid.](https://github.com/emw1687/metis_projects/blob/master/02_luther/presentation.pdf)
 ### Can data from the NYT Bestseller List help us to predict something useful about a book?
 
 #### Summary

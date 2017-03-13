@@ -1,4 +1,4 @@
-## [WTWY NYC Gala 2017: Creating awareness and support for women in technology](https://github.com/emw1687/metis_projects/blob/master/benson/Presentation.pdf)
+## [WTWY NYC Gala 2017: Creating awareness and support for women in technology](https://github.com/emw1687/metis_projects/blob/master/01_benson/Presentation.pdf)
 ### Identifying target MTA stations by traffic, commuter ridership, and income
 
 #### Contributors:

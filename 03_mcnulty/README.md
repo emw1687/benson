@@ -1,4 +1,4 @@
-## [Don't Poison Our Kids](https://github.com/emw1687/metis_projects/blob/master/mcnulty/presentation.pdf)
+## [Don't Poison Our Kids](https://github.com/emw1687/metis_projects/blob/master/03_mcnulty/presentation.pdf)
 ### Flint: A Cautionary Tale
 
 #### Summary

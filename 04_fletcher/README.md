@@ -1,4 +1,4 @@
-## [What if we didn’t always get what we wanted?](https://github.com/emw1687/metis_projects/blob/master/fletcher/presentation.pdf)
+## [What if we didn’t always get what we wanted?](https://github.com/emw1687/metis_projects/blob/master/04_fletcher/presentation.pdf)
 ### Finding new friends in Seattle
 
 #### Tools
