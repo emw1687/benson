@@ -1,0 +1,147 @@
+### AirBnB
+
+#### [Inside Airbnb - Get the Data](http://insideairbnb.com/get-the-data.html)
+* Description: Listings scraped from AirBnB for cities across the US
+* Source: InsideAirbnb
+* File(s):
+  * asheville.listings.csv
+  * austin.listings.csv
+  * boston.listings.csv
+  * chicago.listings.csv
+  * denver.listings.csv
+  * nashville.listings.csv
+  * losangeles.listings.csv
+  * neworleans.listings.csv
+  * newyorkcity.listings.csv
+  * oakland.listings.csv
+  * portland.listings.csv
+  * sandiego.listings.csv
+  * sanfrancisco.listings.csv
+  * santacruz.listings.csv
+  * seattle.listings.csv
+  * washingtondc.listings.csv
+* Date retrieved: 03/16/2017
+
+### Zillow Neighborhoods
+
+#### [Zillow Neighborhoods](https://www.zillow.com/howto/api/neighborhood-boundaries.htm)
+* Description: Neighborhoods compiled by Zillow, by state
+* Source: Zillow
+* File(s):
+  * ZillowNeighborhoods-CA.zip
+  * ZillowNeighborhoods-CO.zip
+  * ZillowNeighborhoods-DC.zip
+  * ZillowNeighborhoods-IL.zip
+  * ZillowNeighborhoods-LA.zip
+  * ZillowNeighborhoods-MA.zip
+  * ZillowNeighborhoods-NC.zip
+  * ZillowNeighborhoods-NY.zip
+  * ZillowNeighborhoods-OR.zip
+  * ZillowNeighborhoods-TN.zip
+  * ZillowNeighborhoods-TX.zip
+  * ZillowNeighborhoods-WA.zip
+* Date retrieved: 03/19/2017
+
+### Public Neighborhoods
+
+#### Asheville [Neighborhoods](http://data.ashevillenc.gov/datasets/3450b18c20bf432eb8db7a002e631046_0)
+* Description: Asheville neighborhoods
+* Source: City of Asheville Open Data
+* File(s):
+  * asheville.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Austin [Neighborhoods](https://data.austintexas.gov/Neighborhood/Neighborhood-Planning-Areas/ci6h-vmgm)
+* Description: Austin 2010 census tracts assigned to neighborhoods
+* Source: data.austintexas.gov
+* File(s):
+  * austin.neighborhoods.geojson
+  * austin.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Boston [Neighborhoods](https://data.cityofboston.gov/City-Services/Boston-Neighborhood-Shapefiles/af56-j7tb)
+* Description: Boston neighborhoods
+* Source: City of Boston - Data Boston
+* File(s):
+  * boston.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Chicago [Neighborhoods](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/9wp7-iasj/data)
+* Description: Chicago neighborhoods
+* Source: City of Chicago Data Portal
+* File(s):
+  * chicago.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Denver [Neighborhoods](https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-statistical-neighborhoods)
+* Description: Denver census tracts mapped to neighborhoods
+* Source: Denver Open Data Catalog
+* File(s):
+  * denver.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Los Angeles [Neighborhoods](http://maps.latimes.com/about/#the-data)
+* Description: Los Angeles neighborhoods
+* Source: Los Angeles Times' Mapping LA Project
+* File(s):
+  * losangeles.neighborhoods.zip
+* Date retrieved: 03/19/2017
+
+#### New Orleans [Neighborhoods](http://portal-nolagis.opendata.arcgis.com/datasets/neighborhood-statistical-areas)
+* Description: New Orleans census tracts assigned to neighborhoods
+* Source: City of New Orleans GIS
+* File(s):
+  * neworleans.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### New York City [Neighborhoods](https://data.cityofnewyork.us/City-Government/Neighborhood-Areas/j9k3-3s5k)
+* Description: NYC 2010 census tracts assigned to neighborhoods
+* Source: NYC OpenData
+* File(s):
+  * newyorkcity.neighborhoods.geojson
+  * newyorkcity.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Oakland [Neighborhoods](https://data.oaklandnet.com/Property/Oakland-Neighborhoods/7zky-kcq9)
+* Description: Oakland neighborhoods
+* Source: OakData
+* File(s):
+  * oakland.neighborhoods.geojson
+  * oakland.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Portland [Neighborhoods](http://gis-pdx.opendata.arcgis.com/datasets/neighborhood-boundaries)
+* Description: Portland Neighborhood Association boundaries
+* Source: OakData
+* File(s):
+  * portland.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### San Francisco [Neighborhoods](https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods-2010-census-tracts-assigned/bwbp-wk3r)
+* Description: SF 2010 census tracts assigned to neighborhoods
+* Source: SF OpenData
+* File(s):
+  * sanfrancisco.neighborhoods.geojson
+  * sanfrancisco.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Santa Cruz [Neighborhoods](http://data-cruzgis.opendata.arcgis.com/datasets/3ae4e771e5c1400da15961f88cada26f_5)
+* Description: Santa Cruz neighborhoods
+* Source: Santa Cruz City GIS Open Data
+* File(s):
+  * santacruz.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Seattle [Neighborhoods](https://data.seattle.gov/dataset/Neighborhoods/2mbt-aqqx)
+* Description: Seattle neighborhoods
+* Source: data.seattle.gov
+* File(s):
+  * seattle.neighborhoods.zip
+* Date retrieved: 03/17/2017
+
+#### Washington DC [Neighborhoods](http://opendata.dc.gov/datasets/f6c703ebe2534fc3800609a07bad8f5b_17)
+* Description: Washington DC neighborhoods
+* Source: District of Columbia Open Data
+* File(s):
+  * washingtondc.neighborhoods.zip
+* Date retrieved: 03/17/2017
