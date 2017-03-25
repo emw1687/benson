@@ -38,7 +38,7 @@
                    .attr("fill", "grey");
 
                  //map cities and their total listings
-                 d3.csv("data/city_totals.csv", function(data) {
+                 d3.csv("data/city_pcts.csv", function(data) {
 
                    //create circles, one for each city in dataset
                    var circles = svg.selectAll("circle")
@@ -51,21 +51,38 @@
                     //r = sqrt(number of listings * pi)
                     circles.attr("cx", function(d) { return projection([d.lng, d.lat])[0]; })
                            .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
-                           .attr("r", function (d) { return Math.sqrt(d.total_listings) * 3.14/20 })
+                           .attr("r", function (d) { return Math.sqrt(d.pct_total_listings) * 3.14 * 10 })
                            .style("fill", "blue")
                            .style("opacity", 0.80);
 
                      //add functionality to 'apartment' (change to apartment data on click)
+                     //function to update circle sizes based on property types
+                     /*
+                     var prop_update = function(id, csv_header, scale) {
+                           d3.select(id)
+                              .on("click", function() {
+                                var circles = svg.selectAll("circle")
+                                             .data(data)
+                                             .transition()
+                                             .delay(function(d, i) {
+                                               return i / dataset.length * 1000;
+                                             })
+                                             .duration(500)
+                                             .attr("r", function (d) { return Math.sqrt(d.csv_header) * 3.14/scale })
+                                             .style("fill", "red");
+                           });
+
+                     };
+
+                     prop_update("#apartment", apartment, 20)
+                     */
                      d3.select("#apartment")
                         .on("click", function() {
                           var circles = svg.selectAll("circle")
                                        .data(data)
                                        .transition()
-                                       /*.delay(function(d, i) {
-                                         return i / dataset.length * 1000;
-                                       })*/
                                        .duration(500)
-                                       .attr("r", function (d) { return Math.sqrt(d.apartment) * 3.14/20 })
+                                       .attr("r", function (d) { return Math.sqrt(d.apartment) * 3.14 * 10 })
                                        .style("fill", "red");
                      });
 
@@ -75,11 +92,8 @@
                           var circles = svg.selectAll("circle")
                                        .data(data)
                                        .transition()
-                                       /*.delay(function(d, i) {
-                                         return i / dataset.length * 1000;
-                                       })*/
                                        .duration(500)
-                                       .attr("r", function (d) { return Math.sqrt(d.castle) * 3.14 })
+                                       .attr("r", function (d) { return Math.sqrt(d.castle) * 3.14 * 10})
                                        .style("fill", "red");
                      });
 
