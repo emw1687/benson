@@ -42,7 +42,7 @@
 
                  //map cities and their total listings
                  d3.csv("data/city_pcts.csv", function(data) {
-
+                   
                    //create circles, one for each city in dataset
                    var circles = svg.selectAll("circle")
                                     .data(data)
@@ -51,6 +51,7 @@
 
                     //scale for circles
                     var circle_scale = 20
+                    var opacity_scale = 5
 
                     //add attributes to circles
                     //cx, cy = lat/long
@@ -59,7 +60,7 @@
                            .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
                            .attr("r", function (d) { return Math.sqrt(d.pct_total_listings) * 3.14 * circle_scale })
                            .style("fill", "blue")
-                           .style("opacity", 0.80);
+                           .style("opacity", function (d) { return d.pct_total_listings**(3/4) * opacity_scale });
 
                      //add functionality to 'apartment' (change to apartment data on click)
                      //function to update circle sizes based on property types
@@ -72,7 +73,8 @@
                                              .transition()
                                              .duration(500)
                                              .attr("r", function (d) { return Math.sqrt(d[csv_header]) * 3.14 * circle_scale })
-                                             .style("fill", "yellow");
+                                             .style("fill", "purple")
+                                             .style("opacity", function (d) {return d[csv_header]**(3/4) * opacity_scale });
                            });
 
                      };
