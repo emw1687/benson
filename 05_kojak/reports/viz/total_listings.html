@@ -11,10 +11,53 @@
         </style>
     </head>
     <body>
-        <p id=apartment>Apartments</p> <p id=castle>Castles</p> <p id=all>Reset</p>
+        <!--<button id=apartment>Apartments</button> <button id=castle>Castles</p> <p id=all>Reset</p> -->
         <!-- <p>Click on this text to update the chart with new data values!</p> -->
         <script type="text/javascript">
             // Your beautiful D3 code will go here
+            //property types
+            var prop_types = [
+              ["apartment", "Apartments"],
+              ["b&bs", "Bed & Breakfasts"],
+              ["boats", "Boats"],
+              ["hotels", "Boutique Hotels"],
+              ["bungalows", "Bungalows"],
+              ["cabins", "Cabins"],
+              ["campers", "Campers/RVs"],
+              ["castles", "Castles"],
+              ["caves", "Caves"],
+              ["chalets", "Chalets"],
+              ["condos", "Condominiums"],
+              ["dorms", "Dorms"],
+              ["earthouses", "Earthouses"],
+              ["floors", "Entire Floors"],
+              ["guesthouses", "Guesthouses"],
+              ["hostels", "Hostels"],
+              ["houses", "Houses"],
+              ["huts", "Huts"],
+              ["islands", "Islands"],
+              ["lighthouses", "Lighthouses"],
+              ["lofts", "Lofts"],
+              ["other", "Other"],
+              ["planes", "Planes"],
+              ["tents", "Tents"],
+              ["timeshares", "Timeshares"],
+              ["tipis", "Tipis"],
+              ["townhouses", "Townhouses"],
+              ["trains", "Trains"],
+              ["treehouses", "Treehouses"],
+              ["villas", "Villas"],
+              ["yurts", "Yurts"]
+            ];
+
+            //create buttons
+            d3.select("body").selectAll("input")
+              .data(prop_types)
+              .enter()
+              .append("input")
+              .attr("type", "button")
+              .attr("id", function(d) { return d[0]; })
+              .attr("value", function(d) { return d[1]; });
 
             //svg width and height
             var w = 900;
@@ -42,7 +85,7 @@
 
                  //map cities and their total listings
                  d3.csv("data/city_pcts.csv", function(data) {
-                   
+
                    //create circles, one for each city in dataset
                    var circles = svg.selectAll("circle")
                                     .data(data)
@@ -79,7 +122,7 @@
 
                      };
 
-                     prop_update("#apartment", "apartment");
+                     prop_update("apartment", "apartment");
                      prop_update("#castle", "castle");
                      prop_update("#all", "pct_total_listings");
 
