@@ -5,8 +5,8 @@
         <title>Number of Listings by City</title>
         <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
         <style type="text/css">
-        p {
-          display: inline;
+        .input {
+          display: block;
         }
         </style>
     </head>
@@ -16,38 +16,38 @@
 
             //property types
             var prop_types = [
-              ["apartment", "Apartments"],
-              ["bed&breakfast", "Bed & Breakfasts"],
-              ["boat", "Boats"],
-              ["boutiquehotel", "Boutique Hotels"],
-              ["bungalow", "Bungalows"],
-              ["cabin", "Cabins"],
-              ["camperrv", "Campers/RVs"],
-              ["castle", "Castles"],
-              ["cave", "Caves"],
-              ["chalet", "Chalets"],
-              ["condominium", "Condominiums"],
-              ["dorm", "Dorms"],
-              ["earthhouse", "Earthouses"],
-              ["entirefloor", "Entire Floors"],
-              ["guesthouse", "Guesthouses"],
-              ["hostel", "Hostels"],
-              ["house", "Houses"],
-              ["hut", "Huts"],
-              ["island", "Islands"],
-              ["lighthouse", "Lighthouses"],
-              ["loft", "Lofts"],
-              ["other", "Other"],
-              ["plane", "Planes"],
-              ["tent", "Tents"],
-              ["timeshare", "Timeshares"],
-              ["tipi", "Tipis"],
-              ["townhouse", "Townhouses"],
-              ["train", "Trains"],
-              ["treehouse", "Treehouses"],
-              ["villa", "Villas"],
-              ["yurt", "Yurts"],
-              ["pct_total_listings", "Reset"]
+              ["apartment", "Apartments", "blue"],
+              ["bed&breakfast", "Bed & Breakfasts", "red"],
+              ["boat", "Boats", "purple"],
+              ["boutiquehotel", "Boutique Hotels", "red"],
+              ["bungalow", "Bungalows", "purple"],
+              ["cabin", "Cabins", "purple"],
+              ["camperrv", "Campers/RVs", "purple"],
+              ["castle", "Castles", "purple"],
+              ["cave", "Caves", "purple"],
+              ["chalet", "Chalets", "purple"],
+              ["condominium", "Condominiums", "blue"],
+              ["dorm", "Dorms", "purple"],
+              ["earthhouse", "Earthouses", "purple"],
+              ["entirefloor", "Entire Floors", "purple"],
+              ["guesthouse", "Guesthouses", "purple"],
+              ["hostel", "Hostels", "red"],
+              ["house", "Houses", "blue"],
+              ["hut", "Huts", "purple"],
+              ["island", "Islands", "purple"],
+              ["lighthouse", "Lighthouses", "purple"],
+              ["loft", "Lofts", "blue"],
+              ["other", "Other", "purple"],
+              ["plane", "Planes", "purple"],
+              ["tent", "Tents", "purple"],
+              ["timeshare", "Timeshares", "purple"],
+              ["tipi", "Tipis", "purple"],
+              ["townhouse", "Townhouses", "blue"],
+              ["train", "Trains", "purple"],
+              ["treehouse", "Treehouses", "purple"],
+              ["villa", "Villas", "purple"],
+              ["yurt", "Yurts", "purple"],
+              ["pct_total_listings", "Reset", "green"]
             ];
 
             //create buttons
@@ -57,7 +57,11 @@
               .append("input")
               .attr("type", "button")
               .attr("id", function(d) { return d[0]; })
-              .attr("value", function(d) { return d[1]; });
+              .attr("value", function(d) { return d[1]; })
+              .style("background", function(d) { return d[2]; })
+              .style("color", "white")
+              .style("border-radius", "15%")
+              .style("padding", "2px");
 
             //svg width and height
             var w = 900;
@@ -102,19 +106,20 @@
                     circles.attr("cx", function(d) { return projection([d.lng, d.lat])[0]; })
                            .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
                            .attr("r", function (d) { return Math.sqrt(d.pct_total_listings) * 3.14 * circle_scale })
-                           .style("fill", "blue")
+                           .style("fill", "green")
                            .style("opacity", function (d) { return d.pct_total_listings**(3/4) * opacity_scale });
 
                      //update data on button click
                      d3.selectAll("input")
                         .on("click", function() {
                           csv_header = this.id;
+                          color = this.style.background;
                           var circles = svg.selectAll("circle")
                                        .data(data)
                                        .transition()
                                        .duration(500)
                                        .attr("r", function (d) { return Math.sqrt(d[csv_header]) * 3.14 * circle_scale })
-                                       .style("fill", "purple")
+                                       .style("fill", color)
                                        .style("opacity", function (d) {return d[csv_header]**(3/4) * opacity_scale });
                         });
 
