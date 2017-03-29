@@ -25,7 +25,7 @@ def viz_page():
     """
     Homepage: serve our visualization page, awesome.html
     """
-    return flask.render_template("nmf_demo_child.html")
+    return flask.render_template("nmf_demo.html")
     #with open("nmf_demo.html", 'r') as viz_file:
     #    return viz_file.read()
 
@@ -41,22 +41,21 @@ def match_me():
     #read data that came with post as dict
     #desc = flask.request['desc']
     desc = [str(flask.request.form['text'])]
+    level = flask.request.form['range']
     #data = flask.request.json
 
-    levels = {'same': 0,
-              'mix': int(round(np.median(range(len(nmf_topics))), 0)),
-              'opposite': len(nmf_topics)-1}
-
-    #desc = data['me']
-    #level = data['level']
+    levels = {'1': 0,
+              '0.5': int(round(np.median(range(len(nmf_topics))), 0)),
+              '0': len(nmf_topics)-1}
 
     description_vec = nmf_vectorizer.transform(desc)
 
-    #topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][levels[level]]
-    topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][0]
+    topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][levels[level]]
+    #topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][0]
     cluster =  nmf_topics[topic_index].title()
     #return flask.jsonify(cluster)
     flask.flash(str(cluster))
+    #flask.flash(level)
     return flask.redirect(flask.url_for('viz_page'))
     #return str(cluster)
 
