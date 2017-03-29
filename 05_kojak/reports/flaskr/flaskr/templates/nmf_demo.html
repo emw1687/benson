@@ -1,0 +1,24 @@
+<!doctype html>
+<title>Match Me!</title>
+<!--
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+!-->
+<div class=page>
+  <h1>Match Me!</h1>
+
+      <dl>
+      <dt>Describe yourself:
+
+        <form action="." method="POST">
+            <input type="text" name="text">
+            <input type="submit" name="my-form" value="Match me!">
+        </form>
+
+      </dl>
+
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+
+  {% block body %}{% endblock %}
+</div>

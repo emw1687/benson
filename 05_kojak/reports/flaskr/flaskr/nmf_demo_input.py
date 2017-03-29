@@ -1,6 +1,7 @@
 import flask
 import pickle
 import numpy as np
+import os
 
 
 #-----MODEL-----#
@@ -16,23 +17,19 @@ with open('../../../../04_fletcher/models/nmf_demo.pkl', 'rb') as picklefile:
 #-----URLS AND WEB PAGES-----#
 #initialize flask app
 app = flask.Flask(__name__)
-
-'''
-@app.route('/')
-def hello():
-    return 'let\'s match!'
-'''
+app.secret_key = os.urandom(24).encode('hex')
 
 # Homepage
-@app.route("/")
+@app.route('/')
 def viz_page():
     """
     Homepage: serve our visualization page, awesome.html
     """
-    with open("nmf_demo.html", 'r') as viz_file:
-        return viz_file.read()
+    return flask.render_template("nmf_demo_child.html")
+    #with open("nmf_demo.html", 'r') as viz_file:
+    #    return viz_file.read()
 
-@app.route('/match_me', methods=['POST'])
+@app.route('/', methods=['POST'])
 def match_me():
     '''
     description: string, description of traveller
@@ -42,23 +39,26 @@ def match_me():
             opposite : find host dissimilar to traveller
     '''
     #read data that came with post as dict
-    data = flask.request.json
+    #desc = flask.request['desc']
+    desc = [str(flask.request.form['text'])]
+    #data = flask.request.json
 
     levels = {'same': 0,
               'mix': int(round(np.median(range(len(nmf_topics))), 0)),
               'opposite': len(nmf_topics)-1}
 
-    desc = data['me']
-    level = data['level']
+    #desc = data['me']
+    #level = data['level']
 
     description_vec = nmf_vectorizer.transform(desc)
 
-    topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][levels[level]]
-    #topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][0]
+    #topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][levels[level]]
+    topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][0]
     cluster =  nmf_topics[topic_index].title()
-    flash(cluster)
     #return flask.jsonify(cluster)
-    return redirect(url_for('viz_page'))
+    flask.flash(str(cluster))
+    return flask.redirect(flask.url_for('viz_page'))
+    #return str(cluster)
 
     #host_index = np.argsort(nmf_doc_topic[:,topic_index])[::-1][0]
     #print s_listings['host_about'].iloc[host_index]
