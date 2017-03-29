@@ -26,8 +26,6 @@ def viz_page():
     Homepage: serve our visualization page, awesome.html
     """
     return flask.render_template("nmf_demo.html")
-    #with open("nmf_demo.html", 'r') as viz_file:
-    #    return viz_file.read()
 
 @app.route('/', methods=['POST'])
 def match_me():
@@ -39,10 +37,8 @@ def match_me():
             opposite : find host dissimilar to traveller
     '''
     #read data that came with post as dict
-    #desc = flask.request['desc']
     desc = [str(flask.request.form['text'])]
     level = flask.request.form['range']
-    #data = flask.request.json
 
     levels = {'1': 0,
               '0.5': int(round(np.median(range(len(nmf_topics))), 0)),
@@ -51,17 +47,13 @@ def match_me():
     description_vec = nmf_vectorizer.transform(desc)
 
     topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][levels[level]]
-    #topic_index = np.argsort(nmf.transform(description_vec))[0][::-1][0]
+
     cluster =  nmf_topics[topic_index].title()
-    #return flask.jsonify(cluster)
     flask.flash(str(cluster))
-    #flask.flash(level)
+
+    host_index = np.argsort(nmf_doc_topic[:,topic_index])[::-1][0]
+    flask.flash(s_listings['host_about'].iloc[host_index])
     return flask.redirect(flask.url_for('viz_page'))
-    #return str(cluster)
-
-    #host_index = np.argsort(nmf_doc_topic[:,topic_index])[::-1][0]
-    #print s_listings['host_about'].iloc[host_index]
-
 
 #-----RUN WEB APP SERVER-----#
 #debug
