@@ -77,8 +77,8 @@
 
             var path = d3.geo.path().projection(projection);
 
-              //add map of us
-              d3.json("data/us.json", function(json) {
+            //add map of us
+            d3.json("data/us.json", function(json) {
 
                 svg.selectAll("path")
                    .data(json.features)
