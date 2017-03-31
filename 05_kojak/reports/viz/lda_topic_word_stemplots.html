@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Stemplots</title>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+        <style type="text/css">
+        .input {
+          display: block;
+        }
+        </style>
+    </head>
+    <body>
+      <script type="text/javascript">
+      //svg width and height
+      var w = 1000;
+      var h = 300;
+      var padding = 50;
+
+      //create svg
+      var svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+      //load data
+      d3.csv("data/lda_topic_word.csv", function(data) {
+        //create scales
+        var xscale = d3.scale.linear()
+                      .domain([0, data.length])
+                      .range([padding, w-padding]);
+
+        var yscale = d3.scale.linear()
+                      .domain([0, d3.max(data, function(d) { return +d[0]; })])
+                      .range([h-padding, padding]);
+
+        console.log(d3.max(data, function(d) {return +d[0];}));
+
+        //create stems
+        var stems = svg.selectAll("line")
+                      .data(data)
+                      .enter()
+                      .append("line")
+                      .attr("x1", function(d, i) { return xscale(i); })
+                      .attr("y1", yscale(0))
+                      .attr("x2", function(d, i) { return xscale(i); })
+                      .attr("y2", function(d) { return yscale(+d[0]); })
+                      .attr("stroke", "grey")
+                      .attr("stroke-width", 2)
+                      .attr("fill", "none");
+
+        //create circles
+        var circles = svg.selectAll("circle")
+                        .data(data)
+                        .enter()
+                        .append("circle")
+                        .attr("cx", function(d, i) { return xscale(i); })
+                        .attr("cy", function(d) { return yscale(+d[0]); })
+                        .attr("r", 5)
+                        .attr("fill", "grey");
+
+      })
+      </script>
+    </body>
+</html>
