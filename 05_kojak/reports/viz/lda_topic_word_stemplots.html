@@ -5,9 +5,11 @@
         <title>Stemplots</title>
         <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
         <style type="text/css">
+
         .input {
           display: block;
         }
+
         </style>
     </head>
     <body>
@@ -34,13 +36,19 @@
                       .domain([0, d3.max(data, function(d) { return +d[0]; })])
                       .range([h-padding, padding]);
 
-        console.log(d3.max(data, function(d) {return +d[0];}));
+        //create stem + circle groups
+        var stemplots = svg.selectAll("g.stemplot")
+                          .data(data)
+                          .enter()
+                          .append("g")
+                          .attr("class", "stemplot");
 
-        //create stems
-        var stems = svg.selectAll("line")
-                      .data(data)
-                      .enter()
-                      .append("line")
+        //draw stems
+        //var stems = svg.selectAll("line")
+                      //.data(data)
+                      //.enter()
+                      //.append("line")
+        stemplots.append("line")
                       .attr("x1", function(d, i) { return xscale(i); })
                       .attr("y1", yscale(0))
                       .attr("x2", function(d, i) { return xscale(i); })
@@ -49,11 +57,12 @@
                       .attr("stroke-width", 2)
                       .attr("fill", "none");
 
-        //create circles
-        var circles = svg.selectAll("circle")
-                        .data(data)
-                        .enter()
-                        .append("circle")
+        //draw circles
+        //var circles = svg.selectAll("circle")
+                        //.data(data)
+                        //.enter()
+                        //.append("circle")
+        stemplots.append("circle")
                         .attr("cx", function(d, i) { return xscale(i); })
                         .attr("cy", function(d) { return yscale(+d[0]); })
                         .attr("r", 5)
