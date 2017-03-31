@@ -44,10 +44,6 @@
                           .attr("class", "stemplot");
 
         //draw stems
-        //var stems = svg.selectAll("line")
-                      //.data(data)
-                      //.enter()
-                      //.append("line")
         stemplots.append("line")
                       .attr("x1", function(d, i) { return xscale(i); })
                       .attr("y1", yscale(0))
@@ -58,18 +54,23 @@
                       .attr("fill", "none");
 
         //draw circles
-        //var circles = svg.selectAll("circle")
-                        //.data(data)
-                        //.enter()
-                        //.append("circle")
         stemplots.append("circle")
                         .attr("cx", function(d, i) { return xscale(i); })
                         .attr("cy", function(d) { return yscale(+d[0]); })
                         .attr("r", 5)
                         .attr("fill", "grey");
 
+        //draw labels
+        stemplots.append("text")
+                  .text(function(d) { return d[8]; })
+                  .attr("x", function(d, i) { return xscale(i); })
+                  .attr("y", yscale(-1.5 * padding))
+                  .attr("font-family", "sans-serif")
+                  .attr("font-size", "12px")
+                  .attr("text-anchor", "middle")
+                  .attr("fill", "none");
 
-        //add highlight on mouseover
+        //add highlights + labels on mouseover
         stemplots.on("mouseover", function() {
             d3.select(this)
               .select("circle")
@@ -77,16 +78,28 @@
             d3.select(this)
               .select("line")
               .attr("stroke", "orange");
+            d3.select(this)
+              .select("text")
+              .attr("fill", "grey");
           })
 
-        //remove highlight on mouseout
+        //remove highlights + labels on mouseout
         stemplots.on("mouseout", function() {
             d3.select(this)
               .select("circle")
+              .transition()
+              .duration(250)
               .attr("fill", "grey");
             d3.select(this)
               .select("line")
+              .transition()
+              .duration(250)
               .attr("stroke", "grey");
+            d3.select(this)
+              .select("text")
+              .transition()
+              .duration(250)
+              .attr("fill", "none");
           })
 
       })
