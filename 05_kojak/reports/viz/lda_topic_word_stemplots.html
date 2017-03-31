@@ -68,6 +68,27 @@
                         .attr("r", 5)
                         .attr("fill", "grey");
 
+
+        //add highlight on mouseover
+        stemplots.on("mouseover", function() {
+            d3.select(this)
+              .select("circle")
+              .attr("fill", "orange");
+            d3.select(this)
+              .select("line")
+              .attr("stroke", "orange");
+          })
+
+        //remove highlight on mouseout
+        stemplots.on("mouseout", function() {
+            d3.select(this)
+              .select("circle")
+              .attr("fill", "grey");
+            d3.select(this)
+              .select("line")
+              .attr("stroke", "grey");
+          })
+
       })
       </script>
     </body>
