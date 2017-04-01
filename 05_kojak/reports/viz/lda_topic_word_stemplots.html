@@ -5,15 +5,20 @@
         <title>Stemplots</title>
         <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
         <style type="text/css">
-
-        .input {
-          display: block;
-        }
-
         </style>
     </head>
     <body>
       <script type="text/javascript">
+      //draw button for each topic
+      topics = [0, 1, 2, 3, 4, 5, 6, 7]
+      d3.select("body").selectAll("input")
+        .data(topics)
+        .enter()
+        .append("input")
+        .attr("type", "button")
+        .attr("id", function(d) { return d; })
+        .attr("value", function(d) { return d; });
+
       //svg width and height
       var w = 1000;
       var h = 300;
@@ -27,13 +32,14 @@
 
       //load data
       d3.csv("data/lda_topic_word.csv", function(data) {
+
         //create scales
         var xscale = d3.scale.linear()
                       .domain([0, data.length])
                       .range([padding, w-padding]);
 
         var yscale = d3.scale.linear()
-                      .domain([0, d3.max(data, function(d) { return +d[0]; })])
+                      .domain([0, d3.max(data, function(d) { return +d[0], +d[1], +d[2], +d[3], +d[4], +d[5], +d[6], +d[7]; })])
                       .range([h-padding, padding]);
 
         //create stem + circle groups
@@ -43,66 +49,93 @@
                           .append("g")
                           .attr("class", "stemplot");
 
-        //draw stems
-        stemplots.append("line")
-                      .attr("x1", function(d, i) { return xscale(i); })
-                      .attr("y1", yscale(0))
-                      .attr("x2", function(d, i) { return xscale(i); })
-                      .attr("y2", function(d) { return yscale(+d[0]); })
-                      .attr("stroke", "grey")
-                      .attr("stroke-width", 2)
-                      .attr("fill", "none");
+        //function to draw stems
+        var draw_stems = function(topic) {
 
-        //draw circles
-        stemplots.append("circle")
-                        .attr("cx", function(d, i) { return xscale(i); })
-                        .attr("cy", function(d) { return yscale(+d[0]); })
-                        .attr("r", 5)
-                        .attr("fill", "grey");
+          //draw stems
+          stemplots.append("line")
+                        .attr("stroke", "grey")
+                        .attr("x1", function(d, i) { return xscale(i); })
+                        .attr("y1", yscale(0))
+                        .attr("x2", function(d, i) { return xscale(i); })
+                        .attr("y2", function(d) { return yscale(+d[topic]); })
+                        .attr("stroke-width", 3)
+                        .attr("fill", "none");
 
-        //draw labels
-        stemplots.append("text")
-                  .text(function(d) { return d[8]; })
-                  .attr("x", function(d, i) { return xscale(i); })
-                  .attr("y", yscale(-1.5 * padding))
-                  .attr("font-family", "sans-serif")
-                  .attr("font-size", "12px")
-                  .attr("text-anchor", "middle")
-                  .attr("fill", "none");
+          //draw circles
+          stemplots.append("circle")
+                          .attr("fill", "grey")
+                          .attr("cx", function(d, i) { return xscale(i); })
+                          .attr("cy", function(d) { return yscale(+d[topic]); })
+                          .attr("r", 6);
 
-        //add highlights + labels on mouseover
-        stemplots.on("mouseover", function() {
-            d3.select(this)
-              .select("circle")
-              .attr("fill", "orange");
-            d3.select(this)
-              .select("line")
-              .attr("stroke", "orange");
-            d3.select(this)
-              .select("text")
-              .attr("fill", "grey");
-          })
+          //draw labels
+          stemplots.append("text")
+                    .text(function(d) { return d[8]; })
+                    .attr("x", function(d, i) { return xscale(i); })
+                    .attr("y", yscale( -3 * padding ))
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "12px")
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "none");
 
-        //remove highlights + labels on mouseout
-        stemplots.on("mouseout", function() {
-            d3.select(this)
-              .select("circle")
-              .transition()
-              .duration(250)
-              .attr("fill", "grey");
-            d3.select(this)
-              .select("line")
-              .transition()
-              .duration(250)
-              .attr("stroke", "grey");
-            d3.select(this)
-              .select("text")
-              .transition()
-              .duration(250)
-              .attr("fill", "none");
-          })
+          //add highlights + labels on mouseover
+          stemplots.on("mouseover", function() {
+              d3.select(this)
+                .select("circle")
+                .attr("fill", "orange");
+              d3.select(this)
+                .select("line")
+                .attr("stroke", "orange");
+              d3.select(this)
+                .select("text")
+                .attr("fill", "grey");
+            })
 
-      })
+          //remove highlights + labels on mouseout
+          stemplots.on("mouseout", function() {
+              d3.select(this)
+                .select("circle")
+                .transition()
+                .duration(250)
+                .attr("fill", "grey");
+              d3.select(this)
+                .select("line")
+                .transition()
+                .duration(250)
+                .attr("stroke", "grey");
+              d3.select(this)
+                .select("text")
+                .transition()
+                .duration(250)
+                .attr("fill", "none");
+            })
+
+        };
+
+        //update stemplots
+        var update_stems = function(topic) {
+          stemplots.selectAll("line")
+            .transition()
+            .duration(500)
+            .attr("y2", function(d) { return yscale(+d[topic]); })
+          stemplots.selectAll("circle")
+            .transition()
+            .duration(500)
+            .attr("cy", function(d) { return yscale(+d[topic]); })
+        };
+
+        //intitial stem plot
+        draw_stems(0);
+
+        //update data on button click
+        d3.selectAll("input")
+           .on("click", function() {
+             topic = this.id;
+             update_stems(topic);
+           });
+
+      });
       </script>
     </body>
 </html>
