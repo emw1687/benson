@@ -30,10 +30,10 @@ def results_page():
     """
     Homepage: serve our visualization page, awesome.html
     """
-    return flask.render_template("kojak_layout.html")
+    return flask.render_template("kojak_results.html")
 
 @app.route('/', methods=['POST'])
-def find_comps():
+def get_results():
     neighborhoods = df_loc['neighborhood'].apply(lambda u: u.encode('utf-8')).tolist()
     cities = df_loc['city'].tolist()
     topics = df_loc['topic'].tolist()
