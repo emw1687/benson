@@ -1,0 +1,43 @@
+{% extends "kojak_layout.html" %}
+{% block body %}
+      <dl>
+      <dt>Describe your neighborhood:
+
+        <form action="." method="POST">
+          <h4>Tacos</h4>
+          <input type="range" name="1_taco" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Subway</h4>
+          <input type="range" name="2_subway" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Car</h4>
+          <input type="range" name="3_car" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Museums</h4>
+          <input type="range" name="4_museum" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Farmer's Markets</h4>
+          <input type="range" name="5_farmer" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Campus</h4>
+          <input type="range" name="6_campus" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Diverse</h4>
+          <input type="range" name="7_diverse" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Art galleries</h4>
+          <input type="range" name="8_art" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Nightlife</h4>
+          <input type="range" name="9_nightlife" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Local Attractions</h4>
+          <input type="range" name="10_attractions" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Golf and Tennis</h4>
+          <input type="range" name="11_golf" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Outdoor activities</h4>
+          <input type="range" name="12_outdoors" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Streetcars</h4>
+          <input type="range" name="13_streetcars" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Water activities</h4>
+          <input type="range" name="14_water" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Breweries</h4>
+          <input type="range" name="15_breweries" min=0.0 max=1.0 step=0.1 value=0.0>
+          <h4>Bikes</h4>
+          <input type="range" name="16_bikes" min=0.0 max=1.0 step=0.1 value=0.0>
+          <input type="submit" name="my-form" value="Submit">
+        </form>
+
+      </dl>
+{% endblock %}
