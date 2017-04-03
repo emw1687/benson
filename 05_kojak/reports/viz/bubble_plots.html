@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bubbleplots</title>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+        <style type="text/css">
+
+
+
+        </style>
+    </head>
+    <body>
+      <script type="text/javascript">
+      /*
+      references:
+      https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
+      */
+      //set largest diameter
+      var diameter = 500;
+
+      //set colors
+      var color = d3.scale.category20b();
+
+      //create bubble
+      var bubble = d3.layout.pack()
+                    .sort(null)
+                    .size([diameter, diameter])
+                    .padding(1.5);
+
+      //create svg
+      var svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", diameter)
+                  .attr("height", diameter)
+                  .attr("class", "bubble");
+
+      //load data
+//      d3.csv("data/nmf_topic_word.csv", function(data) {
+      d3.csv("data/nmf_top_10_words.csv", function(data) {
+
+        var draw_bubbles = function(topic) {
+
+          //set topic to show
+          //var topic = "8.0";
+
+          //convert to numeric values
+          data = data.map(function(d) {
+            d.value = +d.importance ;
+            return d;
+          });
+
+          //filter to only one topic
+          data = data.filter(function(d) {
+            return d.topic == topic;
+          });
+
+/*
+          //convert to numeric values
+          data = data.map(function(d) {
+            d.value = +d[topic];
+            return d;
+          });
+*/
+
+          //convert data to bubble format
+          var nodes = bubble.nodes({ children:data }).filter(function(d) { return !d.children; });
+
+          //setup chart
+          var bubbles = svg.append("g")
+                            .attr("transform", "translate(0,0)")
+                            .selectAll(".bubble")
+                            .data(nodes)
+                            .enter();
+
+          //create bubbles
+          bubbles.append("circle")
+                  .attr("r", function(d) { return d.r; })
+                  .attr("cx", function(d) { return d.x; })
+                  .attr("cy", function(d) { return d.y; })
+                  .style("fill", "grey")
+                  .style("opacity", 0.8);
+
+          //format text for each bubbles
+          bubbles.append("text")
+                  .attr("x", function(d) { return d.x; })
+                  .attr("y", function(d) { return d.y + d.r/10; })
+                  .attr("text-anchor", "middle")
+                  .attr("vertical-align", "middle")
+                  .text(function(d) { return d["word"]; })
+                  .style({
+                    "fill": "white",
+                    "font-family": "georgia",
+                    "font-size": "14px"
+                  });
+
+        };
+
+        draw_bubbles(13.0);
+
+
+      //update bubbles on button click
+      var update_stems = function(topic) {
+        draw_bubbles(topic)};
+      });
+
+      </script>
+    </body>
+</html>

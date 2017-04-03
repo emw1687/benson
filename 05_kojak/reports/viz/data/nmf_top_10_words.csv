@@ -1,0 +1,161 @@
+topic,word,importance
+0.0,music,897948.0
+0.0,coffee shop,632438.0
+0.0,restaurant bar,556030.0
+0.0,venue,449498.0
+0.0,bar restaurant,436716.0
+0.0,hip,427023.0
+0.0,taco,415671.0
+0.0,cafe,412217.0
+0.0,favorite,411941.0
+0.0,bike,408823.0
+1.0,subway,1726223.0
+1.0,subway stop,280490.0
+1.0,stop,256201.0
+1.0,subway subway,240455.0
+1.0,apartment,225596.0
+1.0,time,192850.0
+1.0,monument,187443.0
+1.0,building,160862.0
+1.0,residential,158149.0
+1.0,market,155529.0
+2.0,freeway,1114542.0
+2.0,airport,452483.0
+2.0,major,406685.0
+2.0,centrally,372942.0
+2.0,neighbor,357836.0
+2.0,movie,342343.0
+2.0,nice,328546.0
+2.0,residential,315932.0
+2.0,easy access,307460.0
+2.0,target,282154.0
+3.0,museum,2072428.0
+3.0,science,834907.0
+3.0,art museum,374837.0
+3.0,academy,336455.0
+3.0,art,335864.0
+3.0,hospital,264998.0
+3.0,aquarium,259369.0
+3.0,botanical,254337.0
+3.0,attraction,250318.0
+3.0,museum art,216243.0
+4.0,market,1195811.0
+4.0,farmer,1006835.0
+4.0,farmer market,985097.0
+4.0,sunday,461588.0
+4.0,cafe,319478.0
+4.0,saturday,287256.0
+4.0,bakery,233436.0
+4.0,market sunday,230485.0
+4.0,coffee shop,222265.0
+4.0,movie,185331.0
+5.0,campus,1748396.0
+5.0,campus campus,642906.0
+5.0,streetcar,291143.0
+5.0,student,215974.0
+5.0,bus,158664.0
+5.0,westside,128772.0
+5.0,grocery food,125751.0
+5.0,rd,112022.0
+5.0,hospital,103408.0
+5.0,famous,102755.0
+6.0,train,1159591.0
+6.0,diverse,520068.0
+6.0,supermarket,517999.0
+6.0,pharmacy,448209.0
+6.0,bus,406633.0
+6.0,jfk,333454.0
+6.0,laundromat,319250.0
+6.0,chinese,304994.0
+6.0,bank,297632.0
+6.0,italian,261740.0
+7.0,art,1486492.0
+7.0,gallery,984969.0
+7.0,art gallery,510661.0
+7.0,artist,306929.0
+7.0,sports,221752.0
+7.0,mexican,208202.0
+7.0,friday,205458.0
+7.0,culture,198864.0
+7.0,month,196844.0
+7.0,brewery,188477.0
+8.0,apartment,678483.0
+8.0,building,488337.0
+8.0,step,453118.0
+8.0,boutique,406373.0
+8.0,famous,391722.0
+8.0,restaurant bar,381313.0
+8.0,nightlife,312421.0
+8.0,bar restaurant,298298.0
+8.0,low,296723.0
+8.0,grocery food,292612.0
+9.0,zoo,1668143.0
+9.0,brewery,229539.0
+9.0,sports,187514.0
+9.0,hospital,173901.0
+9.0,attraction,150517.0
+9.0,nature,146449.0
+9.0,airport,142071.0
+9.0,offer,123729.0
+9.0,residential,120540.0
+9.0,bus,107637.0
+10.0,golf,1184442.0
+10.0,golf course,1074788.0
+10.0,course,865781.0
+10.0,hole,152706.0
+10.0,tennis,132989.0
+10.0,court,112716.0
+10.0,playground,82511.0
+10.0,tennis court,76186.0
+10.0,car,74371.0
+10.0,airport,72703.0
+11.0,trail,1301724.0
+11.0,hike,713645.0
+11.0,pool,338641.0
+11.0,hike trail,336467.0
+11.0,bike trail,258958.0
+11.0,hiking,248113.0
+11.0,nature,239962.0
+11.0,tennis,217239.0
+11.0,court,210268.0
+11.0,peaceful,205246.0
+12.0,streetcar,441863.0
+12.0,fest,409829.0
+12.0,jazz,404896.0
+12.0,frenchman,404423.0
+12.0,parade,337713.0
+12.0,esplanade,313255.0
+12.0,canal,304592.0
+12.0,music,284300.0
+12.0,neighbor,259509.0
+12.0,car,187351.0
+13.0,surf,813361.0
+13.0,boardwalk,651632.0
+13.0,bike,560731.0
+13.0,water,424650.0
+13.0,boat,322507.0
+13.0,famous,279384.0
+13.0,path,262322.0
+13.0,kayak,260214.0
+13.0,aquarium,250411.0
+13.0,board,241763.0
+14.0,light rail,1048339.0
+14.0,rail,1017955.0
+14.0,light,745672.0
+14.0,bus,247550.0
+14.0,sport,198554.0
+14.0,diverse,195852.0
+14.0,public,188160.0
+14.0,brewery,187521.0
+14.0,car,177888.0
+14.0,coffee shop,177269.0
+15.0,cart,839246.0
+15.0,food cart,833998.0
+15.0,season,653025.0
+15.0,max,484464.0
+15.0,bike,450370.0
+15.0,bus,393016.0
+15.0,coffee shop,342542.0
+15.0,pub,290503.0
+15.0,brewery,226525.0
+15.0,car,222330.0

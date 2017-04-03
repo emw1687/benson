@@ -5,6 +5,24 @@
         <title>Stemplots</title>
         <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
         <style type="text/css">
+
+          .axis path,
+          .axis line {
+            fill: none;
+            stroke: grey;
+            opacity: 0.75;
+          }
+
+          .axis text {
+            fill: grey;
+            opacity: 0.75;
+          }
+
+          text {
+            font-family: georgia;
+            font-size: 14px;
+          }
+
         </style>
     </head>
     <body>
@@ -40,7 +58,13 @@
 
         var yscale = d3.scale.linear()
                       .domain([0, d3.max(data, function(d) { return +d[0], +d[1], +d[2], +d[3], +d[4], +d[5], +d[6], +d[7]; })])
-                      .range([h-padding, padding]);
+                      .range([h-padding/2, padding/2]);
+
+        //create axes
+        var yAxis = d3.svg.axis()
+                          .scale(yscale)
+                          .orient("left")
+                          .ticks(6);
 
         //create stem + circle groups
         var stemplots = svg.selectAll("g.stemplot")
@@ -59,8 +83,7 @@
                         .attr("y1", yscale(0))
                         .attr("x2", function(d, i) { return xscale(i); })
                         .attr("y2", function(d) { return yscale(+d[topic]); })
-                        .attr("stroke-width", 2)
-                        .attr("fill", "none");
+                        .attr("stroke-width", 2);
 
           //draw circles
           stemplots.append("circle")
@@ -90,7 +113,7 @@
               d3.select(this)
                 .select("text")
                 .attr("fill", "grey");
-            })
+            });
 
           //remove highlights + labels on mouseout
           stemplots.on("mouseout", function() {
@@ -109,7 +132,7 @@
                 .transition()
                 .duration(250)
                 .attr("fill", "none");
-            })
+            });
 
         };
 
@@ -134,6 +157,12 @@
              topic = this.id;
              update_stems(topic);
            });
+
+        //draw axes
+        svg.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(" + padding + ", 0)")
+            .call(yAxis);
 
       });
       </script>

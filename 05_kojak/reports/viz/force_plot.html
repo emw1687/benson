@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Force plot</title>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+        <style type="text/css">
+
+
+
+        </style>
+    </head>
+    <body>
+      <script type="text/javascript">
+      /*
+      references:
+      http://chimera.labs.oreilly.com/books/1230000000345/ch11.html#_force_layout
+      http://vallandingham.me/bubble_charts_in_js.html
+      https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
+      */
+
+      //set width and height
+      var w = 800;
+      var h = 600;
+
+      var center = {x: w/2, y: h/2};
+
+
+
+      //create svg
+      var svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+      //charge function for dynamic charge values based on size of node
+      function charge(d) {
+        return -Math.pow(+d.importance, 0.25) * 20;
+      };
+
+      //load data
+      d3.csv("data/nmf_top_10_words.csv", function(data) {
+
+        //set topic to show
+        var topic = "0.0";
+
+        //convert to numeric values
+        data = data.map(function(d) {
+          d.value = +d.importance ;
+          return d;
+        });
+
+        //filter to only one topic
+        topic_data = data.filter(function(d) {
+          return d.topic == topic;
+        });
+
+        //scale for radius
+        var radiusScale = d3.scale.pow()
+                                  .exponent(0.5)
+                                  .domain([0, d3.max(topic_data, function(d) { return +d.importance })])
+                                  .range([2,85]);
+
+        //set up force layout
+        var force = d3.layout.force()
+                      .nodes(topic_data)
+                      .size([w, h])
+                      //.charge(charge) //how nodes repel/attract each other
+                      //.gravity(-0.01) //how nodes are repelled from or attracted to center
+                      //.friction(0.9) //scale for tick movement
+                      .start();
+
+        //create nodes as circles
+        var nodes = svg.selectAll("circle")
+                        .data(topic_data)
+                        .enter()
+                        .append("circle")
+                        .attr("r", function(d) { return radiusScale(d.importance); })
+                        .style("fill", "grey")
+                        .style("opacity", 0.8)
+                        .call(force.drag);
+
+        var jitter = 0.5;
+
+        var collide = function(jitter) {
+          return function(d) {
+            return data.forEach(function(d2) {
+              var distance, minDistance, moveX, moveY, x, y;
+              if (d !== d2) {
+                x = d.x - d2.x;
+                y = d.y - d2.y;
+                distance = Math.sqrt(x * x + y * y);
+                minDistance = d.forceR + d2.forceR + collisionPadding;
+                if (distance < minDistance) {
+                  distance = (distance - minDistance) / distance * jitter;
+                  moveX = x * distance;
+                  moveY = y * distance;
+                  d.x -= moveX;
+                  d.y -= moveY;
+                  d2.x += moveX;
+                  return d2.y += moveY;
+                }
+              }
+            });
+          };
+        };
+
+
+        //tick function
+        force.on("tick", function() {
+          nodes
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+        });
+
+      });
+
+      </script>
+    </body>
+</html>
