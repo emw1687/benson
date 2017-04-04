@@ -1,6 +1,12 @@
 <!doctype html>
 <title>Neighborhoods</title>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">
+<style>
+input[type=range] {
+  width: 80%;
+}
+</style>
 <div class=page>
   <h2>Neighborhoods</h2>
   {% block body %}{% endblock %}

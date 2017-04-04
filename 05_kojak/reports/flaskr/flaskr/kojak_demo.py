@@ -20,7 +20,7 @@ app.secret_key = os.urandom(24).encode('hex')
 @app.route('/')
 def home_page():
     """
-    Homepage: serve our visualization page, awesome.html
+    Homepage: serve our input page, kojak_index.html
     """
     return flask.render_template("kojak_index.html")
 
@@ -28,9 +28,9 @@ def home_page():
 @app.route('/results')
 def results_page():
     """
-    Homepage: serve our visualization page, awesome.html
+    Results page: serve our visualization page, kojak_results.html
     """
-    return flask.render_template("kojak_results.html")
+    return flask.render_template("kojak_results.html", topic=topic)
 
 @app.route('/', methods=['POST'])
 def get_results():
@@ -50,6 +50,7 @@ def get_results():
         value = flask.request.form[name]
         scores_list.append(float(value.encode('utf-8')))
 
+    flask.flash(scores_list)
     scores_array = np.array(scores_list)
     scores_distribution = scores_array/sum(scores_array)
 
@@ -58,17 +59,21 @@ def get_results():
         comps = []
         for i in range(len(df_doc_topics)):
             dists[i] = cosine(df_doc_topics.ix[i].T, np.array(scores_distribution))
-        max_keys = dict(sorted(dists.iteritems(), key=operator.itemgetter(1), reverse=True)[:num_comps]).keys()
+        max_keys = sorted(dists, key=dists.get)[:5]
         #print max_keys
         for key in max_keys:
             comps.append(zipped[key])
-        return comps
+        max_topic_index = float(nmf_topics.index(zipped[max_keys[0]][2]))
+        max_topic = zipped[max_keys[0]][2]
+        return comps, max_topic_index, max_topic
 
-    comps = find_comps(scores_distribution)
+    comps, max_topic_index, max_topic = find_comps(scores_distribution)
+    #topic = 5.0;
 
     #return data
     flask.flash(comps)
-    return flask.redirect(flask.url_for('results_page'))
+    return flask.render_template("kojak_results.html", max_topic=max_topic, max_topic_index=max_topic_index)
+    #return flask.redirect(flask.url_for("results_page"))
 
 
 #-----RUN WEB APP SERVER-----#

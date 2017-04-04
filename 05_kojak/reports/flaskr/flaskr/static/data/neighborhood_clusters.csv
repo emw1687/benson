@@ -1,0 +1,15 @@
+,index,city_proper,lat,lng,city,10_attractions,11_golf,12_outdoors,13_streetcars,14_water,15_breweries,16_bikes,1_taco,2_subway,3_car,4_museum,5_farmer,6_campus,7_diverse,8_art,9_nightlife
+0,losangeles,"Los Angeles, CA",34.054935,-118.2444759,losangeles,0,11,10,6,17,0,0,1,6,49,1,11,8,1,9,11
+1,newyorkcity,"New York, NY",40.7305991,-73.9865811,newyorkcity,3,2,0,0,8,0,0,3,7,1,7,2,0,63,5,31
+2,neworleans,"New Orleans, LA",29.9499323,-90.0701155,neworleans,1,1,0,31,0,0,0,0,0,0,0,0,9,0,0,0
+3,boston,"Boston, MA",42.3604823,-71.0595677,boston,1,1,1,0,0,1,0,1,1,0,4,0,1,5,0,9
+4,nashville,"Nasville, TN",36.1597722,-86.610245067,nashville,1,5,2,0,1,0,0,19,0,1,0,2,0,0,2,2
+5,washingtondc,"Washington, DC",38.8949549,-77.0366455,washingtondc,5,0,2,2,0,0,0,0,24,0,2,5,0,0,0,4
+6,portland,"Portland, OR",45.5202471,-122.6741948,portland,0,2,5,0,0,2,42,0,0,2,0,1,0,1,5,1
+7,oakland,"Oakland, CA",37.8044557,-122.2713562,oakland,1,0,7,1,0,0,0,1,10,2,0,19,1,0,1,0
+8,seattle,"Seattle, WA",47.6038321,-122.3300623,seattle,4,3,14,2,3,12,4,1,0,4,5,11,1,0,2,5
+9,sanfrancisco,"San Francisco, CA",37.7792808,-122.4192362,sanfrancisco,2,5,6,2,2,1,0,1,12,6,6,6,2,3,1,19
+10,sandiego,"San Diego, CA",32.7174209,-117.1627713,sandiego,18,8,3,1,9,0,0,3,0,19,0,1,0,0,1,1
+11,chicago,"Chicago, IL",41.8755546,-87.6244211,chicago,5,1,1,2,0,0,0,7,4,1,5,3,2,12,6,21
+12,denver,"Denver, CO",39.7391536,-104.9847033,denver,5,4,3,0,0,10,0,9,0,1,6,0,0,1,6,1
+13,austin,"Austin, TX",30.2711286,-97.7436994,austin,0,1,16,2,0,1,0,14,0,3,0,0,9,0,1,0

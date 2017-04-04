@@ -1,0 +1,161 @@
+topic,word,importance
+1_taco,music,897948.0
+1_taco,coffee shop,632438.0
+1_taco,restaurant bar,556030.0
+1_taco,venue,449498.0
+1_taco,bar restaurant,436716.0
+1_taco,hip,427023.0
+1_taco,taco,415671.0
+1_taco,cafe,412217.0
+1_taco,favorite,411941.0
+1_taco,bike,408823.0
+2_subway,subway,1726223.0
+2_subway,subway stop,280490.0
+2_subway,stop,256201.0
+2_subway,subway subway,240455.0
+2_subway,apartment,225596.0
+2_subway,time,192850.0
+2_subway,monument,187443.0
+2_subway,building,160862.0
+2_subway,residential,158149.0
+2_subway,market,155529.0
+3_car,freeway,1114542.0
+3_car,airport,452483.0
+3_car,major,406685.0
+3_car,centrally,372942.0
+3_car,neighbor,357836.0
+3_car,movie,342343.0
+3_car,nice,328546.0
+3_car,residential,315932.0
+3_car,easy access,307460.0
+3_car,target,282154.0
+4_museum,museum,2072428.0
+4_museum,science,834907.0
+4_museum,art museum,374837.0
+4_museum,academy,336455.0
+4_museum,art,335864.0
+4_museum,hospital,264998.0
+4_museum,aquarium,259369.0
+4_museum,botanical,254337.0
+4_museum,attraction,250318.0
+4_museum,museum art,216243.0
+5_farmer,market,1195811.0
+5_farmer,farmer,1006835.0
+5_farmer,farmer market,985097.0
+5_farmer,sunday,461588.0
+5_farmer,cafe,319478.0
+5_farmer,saturday,287256.0
+5_farmer,bakery,233436.0
+5_farmer,market sunday,230485.0
+5_farmer,coffee shop,222265.0
+5_farmer,movie,185331.0
+6_campus,campus,1748396.0
+6_campus,campus campus,642906.0
+6_campus,streetcar,291143.0
+6_campus,student,215974.0
+6_campus,bus,158664.0
+6_campus,westside,128772.0
+6_campus,grocery food,125751.0
+6_campus,rd,112022.0
+6_campus,hospital,103408.0
+6_campus,famous,102755.0
+7_diverse,train,1159591.0
+7_diverse,diverse,520068.0
+7_diverse,supermarket,517999.0
+7_diverse,pharmacy,448209.0
+7_diverse,bus,406633.0
+7_diverse,jfk,333454.0
+7_diverse,laundromat,319250.0
+7_diverse,chinese,304994.0
+7_diverse,bank,297632.0
+7_diverse,italian,261740.0
+8_art,art,1486492.0
+8_art,gallery,984969.0
+8_art,art gallery,510661.0
+8_art,artist,306929.0
+8_art,sports,221752.0
+8_art,mexican,208202.0
+8_art,friday,205458.0
+8_art,culture,198864.0
+8_art,month,196844.0
+8_art,brewery,188477.0
+9_nightlife,apartment,678483.0
+9_nightlife,building,488337.0
+9_nightlife,step,453118.0
+9_nightlife,boutique,406373.0
+9_nightlife,famous,391722.0
+9_nightlife,restaurant bar,381313.0
+9_nightlife,nightlife,312421.0
+9_nightlife,bar restaurant,298298.0
+9_nightlife,low,296723.0
+9_nightlife,grocery food,292612.0
+10_attractions,zoo,1668143.0
+10_attractions,brewery,229539.0
+10_attractions,sports,187514.0
+10_attractions,hospital,173901.0
+10_attractions,attraction,150517.0
+10_attractions,nature,146449.0
+10_attractions,airport,142071.0
+10_attractions,offer,123729.0
+10_attractions,residential,120540.0
+10_attractions,bus,107637.0
+11_golf,golf,1184442.0
+11_golf,golf course,1074788.0
+11_golf,course,865781.0
+11_golf,hole,152706.0
+11_golf,tennis,132989.0
+11_golf,court,112716.0
+11_golf,playground,82511.0
+11_golf,tennis court,76186.0
+11_golf,car,74371.0
+11_golf,airport,72703.0
+12_outdoors,trail,1301724.0
+12_outdoors,hike,713645.0
+12_outdoors,pool,338641.0
+12_outdoors,hike trail,336467.0
+12_outdoors,bike trail,258958.0
+12_outdoors,hiking,248113.0
+12_outdoors,nature,239962.0
+12_outdoors,tennis,217239.0
+12_outdoors,court,210268.0
+12_outdoors,peaceful,205246.0
+13_streetcars,streetcar,441863.0
+13_streetcars,fest,409829.0
+13_streetcars,jazz,404896.0
+13_streetcars,frenchman,404423.0
+13_streetcars,parade,337713.0
+13_streetcars,esplanade,313255.0
+13_streetcars,canal,304592.0
+13_streetcars,music,284300.0
+13_streetcars,neighbor,259509.0
+13_streetcars,car,187351.0
+14_water,surf,813361.0
+14_water,boardwalk,651632.0
+14_water,bike,560731.0
+14_water,water,424650.0
+14_water,boat,322507.0
+14_water,famous,279384.0
+14_water,path,262322.0
+14_water,kayak,260214.0
+14_water,aquarium,250411.0
+14_water,board,241763.0
+15_breweries,light rail,1048339.0
+15_breweries,rail,1017955.0
+15_breweries,light,745672.0
+15_breweries,bus,247550.0
+15_breweries,sport,198554.0
+15_breweries,diverse,195852.0
+15_breweries,public,188160.0
+15_breweries,brewery,187521.0
+15_breweries,car,177888.0
+15_breweries,coffee shop,177269.0
+16_bikes,cart,839246.0
+16_bikes,food cart,833998.0
+16_bikes,season,653025.0
+16_bikes,max,484464.0
+16_bikes,bike,450370.0
+16_bikes,bus,393016.0
+16_bikes,coffee shop,342542.0
+16_bikes,pub,290503.0
+16_bikes,brewery,226525.0
+16_bikes,car,222330.0
