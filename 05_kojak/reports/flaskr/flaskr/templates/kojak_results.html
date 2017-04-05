@@ -1,8 +1,11 @@
 {% extends "kojak_layout.html" %}
+
 {% block body %}
 
 <div id="area1"></div>
 <div id="area2"></div>
+<div id="area3"></div>
+<div id="area4"></div>
 
 <script type="text/javascript">
 /*
@@ -12,241 +15,334 @@ https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
 //get topic value from flask
 var max_topic_index = "{{ max_topic_index }}";
 var max_topic = "{{ max_topic }}";
-//console.log(max_topic_index, max_topic);
 
+//BUTTONS
+  //property types
+  var neighborhood_types = [
+    ["1_taco", "Tacos", 1.0],
+    ["2_subway", "Subways", 2.0],
+    ["3_car", "Cars", 3.0],
+    ["4_museum", "Museum", 4.0],
+    ["5_farmer", "Farmer's Markets", 5.0],
+    ["6_campus", "Campus", 6.0],
+    ["7_diverse", "Diverse", 7.0],
+    ["8_art", "Art", 8.0],
+    ["9_nightlife", "Nightlife", 9.0],
+    ["10_attractions", "Attractions", 10.0],
+    ["11_golf", "Golf", 11.0],
+    ["12_outdoors", "Outdoors", 12.0],
+    ["13_streetcars", "Streetcars", 13.0],
+    ["14_water", "Water", 14.0],
+    ["15_breweries", "Breweries", 15.0],
+    ["16_bikes", "Bikes", 16.0]
+  ];
 
-//property types
-/*
-var neighborhood_types = [
-  {csv_header: "1_taco", name: "Tacos", index: 0.0},
-  {csv_header: "2_subway", name: "Subways", index: 1.0},
-  {csv_header: "3_car", name: "Cars", index: 2.0},
-  {csv_header: "4_museum", name: "Museums", index: 3.0},
-  {csv_header: "5_farmer", name: "Farmers' Markets", index: 4.0},
-  {csv_header: "6_campus", name: "Campus", index: 5.0},
-  {csv_header: "7_diverse", name: "Diverse", index: 6.0},
-  {csv_header: "8_art", name: "Art", index: 7.0},
-  {csv_header: "9_nightlife", name: "Nightlife", index: 8.0},
-  {csv_header: "10_attractions", name: "Attractions", index: 9.0},
-  {csv_header: "11_golf", name: "Golf", index: 10.0},
-  {csv_header: "12_outdoors", name: "Outdoors", index: 11.0},
-  {csv_header: "13_streetcars", name: "Streetcars", index: 12.0},
-  {csv_header: "14_water", name: "Water", index: 13.0},
-  {csv_header: "15_breweries", name: "Breweries", index: 14.0},
-  {csv_header: "16_bikes", name: "Bikes", index: 15.0}
-];
-*/
+  //create buttons
+  d3.select("#area1").selectAll("input")
+    .data(neighborhood_types)
+    .enter()
+    .append("input")
+    .attr("type", "button")
+    .attr("id", function(d) { return d[0]; })
+    .attr("value", function(d) { return d[1]; })
+    .style("color", "white")
+    .style("border-radius", "15%")
+    .style("padding", "2px");
 
-var neighborhood_types = [
-  ["10_attractions", "Attractions", 10.0],
-  ["11_golf", "Golf", 11.0],
-  ["12_outdoors", "Outdoors", 12.0],
-  ["13_streetcars", "Streetcars", 13.0],
-  ["14_water", "Water", 14.0],
-  ["15_breweries", "Breweries", 15.0],
-  ["16_bikes", "Bikes", 16.0],
-  ["1_taco", "Tacos", 1.0],
-  ["2_subway", "Subways", 2.0],
-  ["3_car", "Cars", 3.0],
-  ["4_museum", "Museum", 4.0],
-  ["5_farmer", "Farmer's Markets", 5.0],
-  ["6_campus", "Campus", 6.0],
-  ["7_diverse", "Diverse", 7.0],
-  ["8_art", "Art", 8.0],
-  ["9_nightlife", "Nightlife", 9.0],
-];
+//BUBBLE PLOTS
+  //set largest diameter
+  var diameter = 500;
 
+  //set colors
+  var color = d3.scale.category20b();
 
-//create buttons
-d3.select("#area1").selectAll("input")
-  .data(neighborhood_types)
-  .enter()
-  .append("input")
-  .attr("type", "button")
-  .attr("id", function(d) { return d[0]; })
-  .attr("value", function(d) { return d[1]; })
-  .style("color", "white")
-  .style("border-radius", "15%")
-  .style("padding", "2px");
+  //create bubble
+  var bubble = d3.layout.pack()
+                .sort(null)
+                .size([diameter, diameter])
+                .padding(1.5);
 
-//set largest diameter
-var diameter = 500;
+  //function to draw bubble plot
+  var draw_bubbles = function(data, max_topic) {
 
-//set colors
-var color = d3.scale.category20b();
+    //create svg
+    var svg1 = d3.select("#area2")
+                .append("svg")
+                .attr("width", diameter)
+                .attr("height", diameter)
+                .attr("class", "bubble");
 
-//create bubble
-var bubble = d3.layout.pack()
-              .sort(null)
-              .size([diameter, diameter])
-              .padding(1.5);
+    //convert to numeric values
+    data = data.map(function(d) {
+      d.value = +d.importance ;
+      return d;
+    });
 
-//create svg
-var svg1 = d3.select("#area1")
-            .append("svg")
-            .attr("width", diameter)
-            .attr("height", diameter)
-            .attr("class", "bubble");
+    //filter to only one topic
+    data = data.filter(function(d) {
+      return d.topic == max_topic;
+    });
 
-//function to draw bubble plot
-var draw_bubbles = function(data, max_topic) {
-  //console.log(max_topic);
+    //convert data to bubble format
+    var nodes = bubble.nodes({ children:data }).filter(function(d) { return !d.children; });
 
-  //console.log(data);
+    //setup chart
+    var bubbles = svg1.append("g")
+                      .attr("transform", "translate(0,0)")
+                      .selectAll(".bubble")
+                      .data(nodes)
+                      .enter();
 
-  //convert to numeric values
-  data = data.map(function(d) {
-    d.value = +d.importance ;
-    return d;
-  });
+    //create bubbles
+    bubbles.append("circle")
+            .attr("r", function(d) { return d.r; })
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; })
+            .style("fill", "grey")
+            .style("opacity", 0.8);
 
-  //console.log(data);
-
-  //filter to only one topic
-  data = data.filter(function(d) {
-    return d.topic == max_topic;
-  });
-
-  //console.log(data);
-
-  //convert data to bubble format
-  var nodes = bubble.nodes({ children:data }).filter(function(d) { return !d.children; });
-
-  //setup chart
-  var bubbles = svg1.append("g")
-                    .attr("transform", "translate(0,0)")
-                    .selectAll(".bubble")
-                    .data(nodes)
-                    .enter();
-
-  //create bubbles
-  bubbles.append("circle")
-          .attr("r", function(d) { return d.r; })
-          .attr("cx", function(d) { return d.x; })
-          .attr("cy", function(d) { return d.y; })
-          .style("fill", "grey")
-          .style("opacity", 0.8);
-
-  //format text for each bubbles
-  bubbles.append("text")
-          .attr("x", function(d) { return d.x; })
-          .attr("y", function(d) { return d.y + d.r/10; })
-          .attr("text-anchor", "middle")
-          .attr("vertical-align", "middle")
-          .text(function(d) { return d["word"]; })
-          .style({
-            "fill": "white",
-            "font-family": "georgia",
-            "font-size": "14px"
-          });
-};
-
-//draw initial bubbles data
-d3.csv("../static/data/nmf_top_10_words1.csv", function(data) {
-    draw_bubbles(data, max_topic);
-});
-
-//map
-//svg width and height
-var w = 450;
-var h = 300;
-
-//create svg
-var svg = d3.select("body")
-            .append("svg")
-            .attr("width", w)
-            .attr("height", h);
-
-var projection = d3.geo.albersUsa()
-                    .scale(600)
-                    .translate([w/2, h/2]);
-
-var path = d3.geo.path().projection(projection);
-
-//scale for circles
-var circle_scale = 2
-
-//add map of us
-d3.json("../static/data/us.json", function(json) {
-
-    svg.selectAll("path")
-       .data(json.features)
-       .enter()
-       .append("path")
-       .attr("d", path)
-       .attr("fill", "grey");
-
-     //add cities and their listings data
-     d3.csv("../static/data/neighborhood_clusters.csv", function(data) {
-
-       //create circles, one for each city in dataset
-       var circles = svg.selectAll("circle")
-                        .data(data)
-                        .enter()
-                        .append("circle");
-
-
-
-        //add attributes to circles
-        //cx, cy = lat/long
-        //r = sqrt(number of listings * pi)
-        circles.attr("cx", function(d) { return projection([d.lng, d.lat])[0]; })
-               .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
-               .attr("r", function (d) { return Math.sqrt(d[max_topic]) * 3.14 * circle_scale })
-               .style("fill", "ff5c61")
-               .style("opacity", 0.6 );
-
-/*         //update data on button click
-         d3.selectAll("input")
-            .on("click", function() {
-              csv_header = this.id;
-              console.log(csv_header);
-              console.log(neighborhood_types.csv_header);
-              color = this.style.background;
-
-              var circles = svg.selectAll("circle")
-                           .data(data)
-                           .transition()
-                           .duration(500)
-                           .attr("r", function (d) { return Math.sqrt(d[csv_header]) * 3.14 * circle_scale });
-
-              draw_bubbles(0.0);
+    //format text for each bubbles
+    bubbles.append("text")
+            .attr("x", function(d) { return d.x; })
+            .attr("y", function(d) { return d.y + d.r/10; })
+            .attr("text-anchor", "middle")
+            .attr("vertical-align", "middle")
+            .text(function(d) { return d["word"]; })
+            .style({
+              "fill": "white",
+              "font-family": "georgia",
+              "font-size": "14px"
             });
-*/
+  };
 
-       });
+  //draw initial bubbles data
+  d3.csv("../static/data/nmf_top_10_words1.csv", function(data) {
+      draw_bubbles(data, max_topic);
+  });
+
+//MAP
+  //svg width and height
+  var w = 450;
+  var h = 300;
+
+  //create svg for map
+  var svg2 = d3.select("#area3")
+              .append("svg")
+              .attr("width", w)
+              .attr("height", h);
+
+  var projection = d3.geo.albersUsa()
+                      .scale(600)
+                      .translate([w/2, h/2]);
+
+  var path = d3.geo.path().projection(projection);
+
+  //scale for map circles
+  var circle_scale = 2
+
+  //add map of us
+  d3.json("../static/data/us.json", function(json) {
+
+      svg2.selectAll("path")
+         .data(json.features)
+         .enter()
+         .append("path")
+         .attr("d", path)
+         .attr("fill", "grey");
+
+       //add cities and their listings data
+       d3.csv("../static/data/neighborhood_clusters.csv", function(data) {
+
+         //create circles, one for each city in dataset
+         var circles = svg2.selectAll("circle")
+                          .data(data)
+                          .enter()
+                          .append("circle");
+
+
+
+          //add attributes to circles
+          //cx, cy = lat/long
+          //r = sqrt(number of listings * pi)
+          circles.attr("cx", function(d) { return projection([d.lng, d.lat])[0]; })
+                 .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
+                 .attr("r", function (d) { return Math.sqrt(d[max_topic]) * 3.14 * circle_scale })
+                 .style("fill", "ff5c61")
+                 .style("opacity", 0.6 );
+
+         });
+
+    });
+
+//STEMPLOTS
+  //svg width and height
+  var w = 1000;
+  var h = 300;
+  var padding = 50;
+
+  //create svg
+  var svg3 = d3.select("#area4")
+              .append("svg")
+              .attr("width", w)
+              .attr("height", h);
+
+  var yscale = d3.scale.linear()
+                .domain([0, 2.0])
+                .range([h-padding/2, padding/2]);
+
+  //function to draw stems
+  var draw_stems = function(data, topic) {
+    //console.log(data);
+      var ymax = d3.max(data, function(array) {
+        return d3.max(array);
+        });
+
+    //create scales
+    var xscale = d3.scale.linear()
+                  .domain([0, data.length])
+                  .range([padding, w-padding]);
+
+    //create axes
+    var yAxis = d3.svg.axis()
+                      .scale(yscale)
+                      .orient("left")
+                      .ticks(6);
+
+    //create stem + circle groups
+    var stemplots = svg3.selectAll("g.stemplot")
+                      .data(data)
+                      .enter()
+                      .append("g")
+                      .attr("class", "stemplot");
+
+    //draw stems
+    stemplots.append("line")
+                  .attr("stroke", "grey")
+                  .attr("x1", function(d, i) { return xscale(i); })
+                  .attr("y1", yscale(0))
+                  .attr("x2", function(d, i) { return xscale(i); })
+                  .attr("y2", function(d) { return yscale(+d[topic]); })
+                  .attr("stroke-width", 2);
+
+    //draw circles
+    stemplots.append("circle")
+                    .attr("fill", "grey")
+                    .attr("cx", function(d, i) { return xscale(i); })
+                    .attr("cy", function(d) { return yscale(+d[topic]); })
+                    .attr("r", 6);
+
+    //draw labels
+    stemplots.append("text")
+              .text(function(d) { return d["word"]; })
+              .attr("x", function(d, i) { return xscale(i); })
+              .attr("y", yscale(-0.15))
+              .attr("font-family", "sans-serif")
+              .attr("font-size", "12px")
+              .attr("text-anchor", "middle")
+              .attr("fill", "none");
+
+    //add highlights + labels on mouseover
+    stemplots.on("mouseover", function() {
+        d3.select(this)
+          .select("circle")
+          .attr("fill", "#ff5c61");
+        d3.select(this)
+          .select("line")
+          .attr("stroke", "#ff5c61");
+        d3.select(this)
+          .select("text")
+          .attr("fill", "grey");
+      });
+
+    //remove highlights + labels on mouseout
+    stemplots.on("mouseout", function() {
+        d3.select(this)
+          .select("circle")
+          .transition()
+          .duration(250)
+          .attr("fill", "grey");
+        d3.select(this)
+          .select("line")
+          .transition()
+          .duration(250)
+          .attr("stroke", "grey");
+        d3.select(this)
+          .select("text")
+          .transition()
+          .duration(250)
+          .attr("fill", "none");
+      });
+
+    //draw axes
+    svg3.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(" + padding + ", 0)")
+        .call(yAxis);
+
+    svg3.selectAll(".axis path")
+        .style("fill", "none")
+        .style("stroke", "grey")
+        .style("opacity", "0.75");
+
+    svg3.selectAll(".axis line")
+        .style("fill", "none")
+        .style("stroke", "grey")
+        .style("opacity", "0.75");
+
+    svg3.selectAll(".axis text")
+        .style("fill", "grey")
+        .style("opacity", "0.75");
+
+  };
+
+  //load data
+  d3.csv("../static/data/nmf_topic_word.csv", function(data) {
+
+    //intitial stem plot
+    draw_stems(data, max_topic);
 
   });
 
-
-//update data on button click
+//UPDATE ALL PLOTS ON BUTTON CLICK
 d3.selectAll("input")
    .on("click", function() {
      csv_header = this.id;
      console.log(csv_header);
-     /*var get_index = function(data1, csv_header) {
-       var data1 = data1.map(function(d) {
-         return d[0] == csv_header;
-       });
-     };
 
-     console.log(get_index(neighborhood_types, csv_header));*/
+     var duration = 500;
 
+      //update bubble plots
+      d3.csv("../static/data/nmf_top_10_words1.csv", function(data) {
+        d3.select("#area2").selectAll("svg").remove();
+
+        draw_bubbles(data, csv_header);
+      });
+
+     //update map
      d3.csv("../static/data/neighborhood_clusters.csv", function(data) {
-       var circles = svg.selectAll("circle")
+       var circles = svg2.selectAll("circle")
                   .data(data)
                   .transition()
-                  .duration(500)
+                  .duration(duration)
                   .attr("r", function (d) { return Math.sqrt(d[csv_header]) * 3.14 * circle_scale });
      });
 
-     d3.csv("../static/data/nmf_top_10_words1.csv", function(data) {
-          svg.selectAll(".bubble")
-         draw_bubbles(data, csv_header);
-     });
-     //draw_bubbles(0.0);
+     //update stemplots
+     d3.csv("../static/data/nmf_topic_word.csv", function(data) {
+       var stemplots = svg3.selectAll("g");
 
-   });
+       stemplots.selectAll("line")
+         .transition()
+         .duration(duration)
+         .attr("y2", function(d) { return yscale(+d[csv_header]); })
+
+       stemplots.selectAll("circle")
+         .transition()
+         .duration(duration)
+         .attr("cy", function(d) { return yscale(+d[csv_header]); })
+      });
+
+  });
 
 </script>
 <!--
