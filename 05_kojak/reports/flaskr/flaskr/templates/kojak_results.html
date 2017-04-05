@@ -43,14 +43,15 @@ var max_topic = "{{ max_topic }}";
     .enter()
     .append("input")
     .attr("type", "button")
+    .attr("class", "btn btn-default")
     .attr("id", function(d) { return d[0]; })
-    .attr("value", function(d) { return d[1]; })
-    .style("color", "grey")
+    .attr("value", function(d) { return d[1]; });
+    /*.style("color", "grey")
     .style("border-radius", "10%")
     .style("padding", "2px")
     .style("width", "50px")
     .style("background-color", "#cccccc")
-    .style("font-family", "georgia");
+    .style("font-family", "georgia");*/
 
 //MAP
   //svg width and height
