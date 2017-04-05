@@ -45,94 +45,27 @@ var max_topic = "{{ max_topic }}";
     .attr("type", "button")
     .attr("id", function(d) { return d[0]; })
     .attr("value", function(d) { return d[1]; })
-    .style("color", "white")
-    .style("border-radius", "15%")
-    .style("padding", "2px");
-
-//BUBBLE PLOTS
-  //set largest diameter
-  var diameter = 500;
-
-  //set colors
-  var color = d3.scale.category20b();
-
-  //create bubble
-  var bubble = d3.layout.pack()
-                .sort(null)
-                .size([diameter, diameter])
-                .padding(1.5);
-
-  //function to draw bubble plot
-  var draw_bubbles = function(data, max_topic) {
-
-    //create svg
-    var svg1 = d3.select("#area2")
-                .append("svg")
-                .attr("width", diameter)
-                .attr("height", diameter)
-                .attr("class", "bubble");
-
-    //convert to numeric values
-    data = data.map(function(d) {
-      d.value = +d.importance ;
-      return d;
-    });
-
-    //filter to only one topic
-    data = data.filter(function(d) {
-      return d.topic == max_topic;
-    });
-
-    //convert data to bubble format
-    var nodes = bubble.nodes({ children:data }).filter(function(d) { return !d.children; });
-
-    //setup chart
-    var bubbles = svg1.append("g")
-                      .attr("transform", "translate(0,0)")
-                      .selectAll(".bubble")
-                      .data(nodes)
-                      .enter();
-
-    //create bubbles
-    bubbles.append("circle")
-            .attr("r", function(d) { return d.r; })
-            .attr("cx", function(d) { return d.x; })
-            .attr("cy", function(d) { return d.y; })
-            .style("fill", "grey")
-            .style("opacity", 0.8);
-
-    //format text for each bubbles
-    bubbles.append("text")
-            .attr("x", function(d) { return d.x; })
-            .attr("y", function(d) { return d.y + d.r/10; })
-            .attr("text-anchor", "middle")
-            .attr("vertical-align", "middle")
-            .text(function(d) { return d["word"]; })
-            .style({
-              "fill": "white",
-              "font-family": "georgia",
-              "font-size": "14px"
-            });
-  };
-
-  //draw initial bubbles data
-  d3.csv("../static/data/nmf_top_10_words1.csv", function(data) {
-      draw_bubbles(data, max_topic);
-  });
+    .style("color", "grey")
+    .style("border-radius", "10%")
+    .style("padding", "2px")
+    .style("width", "50px")
+    .style("background-color", "#cccccc")
+    .style("font-family", "georgia");
 
 //MAP
   //svg width and height
-  var w = 450;
-  var h = 300;
+  var w = 600;
+  var h = 450;
 
   //create svg for map
-  var svg2 = d3.select("#area3")
+  var svg2 = d3.select("#area2")
               .append("svg")
               .attr("width", w)
-              .attr("height", h);
+              .attr("height", h)
+              .style("display", "inline-block");
 
   var projection = d3.geo.albersUsa()
-                      .scale(600)
+                      .scale(800)
                       .translate([w/2, h/2]);
 
   var path = d3.geo.path().projection(projection);
@@ -148,7 +81,7 @@ var max_topic = "{{ max_topic }}";
          .enter()
          .append("path")
          .attr("d", path)
-         .attr("fill", "grey");
+         .attr("fill", "#cccccc");
 
        //add cities and their listings data
        d3.csv("../static/data/neighborhood_clusters.csv", function(data) {
@@ -167,7 +100,7 @@ var max_topic = "{{ max_topic }}";
           circles.attr("cx", function(d) { return projection([d.lng, d.lat])[0]; })
                  .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
                  .attr("r", function (d) { return Math.sqrt(d[max_topic]) * 3.14 * circle_scale })
-                 .style("fill", "ff5c61")
+                 .style("fill", "#238985")
                  .style("opacity", 0.6 );
 
          });
@@ -176,9 +109,9 @@ var max_topic = "{{ max_topic }}";
 
 //STEMPLOTS
   //svg width and height
-  var w = 1000;
+  var w = 800;
   var h = 300;
-  var padding = 50;
+  var padding = 60;
 
   //create svg
   var svg3 = d3.select("#area4")
@@ -236,7 +169,7 @@ var max_topic = "{{ max_topic }}";
               .text(function(d) { return d["word"]; })
               .attr("x", function(d, i) { return xscale(i); })
               .attr("y", yscale(-0.15))
-              .attr("font-family", "sans-serif")
+              .attr("font-family", "georgia")
               .attr("font-size", "12px")
               .attr("text-anchor", "middle")
               .attr("fill", "none");
@@ -303,6 +236,78 @@ var max_topic = "{{ max_topic }}";
 
   });
 
+//BUBBLE PLOTS
+  //set largest diameter
+  var diameter = 350;
+
+  //set colors
+  var color = d3.scale.category20b();
+
+  //create bubble
+  var bubble = d3.layout.pack()
+                .sort(null)
+                .size([diameter, diameter])
+                .padding(1.5);
+
+  //function to draw bubble plot
+  var draw_bubbles = function(data, max_topic) {
+
+    //create svg
+    var svg1 = d3.select("#area4")
+                .append("svg")
+                .attr("width", diameter)
+                .attr("height", diameter)
+                .attr("class", "bubble")
+                .style("display", "inline-block");
+
+    //convert to numeric values
+    data = data.map(function(d) {
+      d.value = +d.importance ;
+      return d;
+    });
+
+    //filter to only one topic
+    data = data.filter(function(d) {
+      return d.topic == max_topic;
+    });
+
+    //convert data to bubble format
+    var nodes = bubble.nodes({ children:data }).filter(function(d) { return !d.children; });
+
+    //setup chart
+    var bubbles = svg1.append("g")
+                      .attr("transform", "translate(0,0)")
+                      .selectAll(".bubble")
+                      .data(nodes)
+                      .enter();
+
+    //create bubbles
+    bubbles.append("circle")
+            .attr("r", function(d) { return d.r; })
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; })
+            .style("fill", "#ff5c61")
+            .style("opacity", 0.8);
+
+    //format text for each bubbles
+    bubbles.append("text")
+            .attr("x", function(d) { return d.x; })
+            .attr("y", function(d) { return d.y + d.r/10; })
+            .attr("text-anchor", "middle")
+            .attr("vertical-align", "middle")
+            .text(function(d) { return d["word"]; })
+            .style({
+              "fill": "white",
+              "font-family": "georgia",
+              "font-size": "12px"
+            });
+  };
+
+  //draw initial bubbles data
+  d3.csv("../static/data/nmf_top_10_words1.csv", function(data) {
+      draw_bubbles(data, max_topic);
+  });
+
 //UPDATE ALL PLOTS ON BUTTON CLICK
 d3.selectAll("input")
    .on("click", function() {
@@ -313,8 +318,7 @@ d3.selectAll("input")
 
       //update bubble plots
       d3.csv("../static/data/nmf_top_10_words1.csv", function(data) {
-        d3.select("#area2").selectAll("svg").remove();
-
+        d3.select("#area4").selectAll("svg.bubble").remove();
         draw_bubbles(data, csv_header);
       });
 
