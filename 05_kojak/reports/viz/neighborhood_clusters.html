@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Number of Listings by City</title>
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+        <style type="text/css">
+        .input {
+          display: block;
+        }
+        </style>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            //property types
+            var neighborhood_types = [
+              ["10_attractions", "Attractions"],
+              ["11_golf", "Golf"],
+              ["12_outdoors", "Outdoors"],
+              ["13_streetcars", "Streetcars"],
+              ["14_water", "Water"],
+              ["15_breweries", "Breweries"],
+              ["16_bikes", "Bikes"],
+              ["1_taco", "Tacos"],
+              ["2_subway", "Subways"],
+              ["3_car", "Cars"],
+              ["4_museum", "Museum"],
+              ["5_farmer", "Farmer's Markets"],
+              ["6_campus", "Campus"],
+              ["7_diverse", "Diverse"],
+              ["8_art", "Art"],
+              ["9_nightlife", "Nightlife"],
+            ];
+
+            //create buttons
+            d3.select("body").selectAll("input")
+              .data(neighborhood_types)
+              .enter()
+              .append("input")
+              .attr("type", "button")
+              .attr("id", function(d) { return d[0]; })
+              .attr("value", function(d) { return d[1]; })
+              .style("background", function(d) { return d[2]; })
+              .style("color", "white")
+              .style("border-radius", "15%")
+              .style("padding", "2px");
+
+            //svg width and height
+            var w = 900;
+            var h = 600;
+
+            //create svg
+            var svg = d3.select("body")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+
+            var projection = d3.geo.albersUsa();
+
+            var path = d3.geo.path().projection(projection);
+
+            //add map of us
+            d3.json("data/us.json", function(json) {
+
+                svg.selectAll("path")
+                   .data(json.features)
+                   .enter()
+                   .append("path")
+                   .attr("d", path)
+                   .attr("fill", "grey");
+
+                 //add cities and their listings data
+                 d3.csv("data/neighborhood_clusters.csv", function(data) {
+
+                   //create circles, one for each city in dataset
+                   var circles = svg.selectAll("circle")
+                                    .data(data)
+                                    .enter()
+                                    .append("circle");
+
+                    //scale for circles
+                    var circle_scale = 2
+
+                    //add attributes to circles
+                    //cx, cy = lat/long
+                    //r = sqrt(number of listings * pi)
+                    circles.attr("cx", function(d) { return projection([d.lng, d.lat])[0]; })
+                           .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
+                           .attr("r", function (d) { return Math.sqrt(d['1_taco']) * 3.14 * circle_scale })
+                           .style("fill", "blue")
+                           .style("opacity", 0.6 );
+
+                     //update data on button click
+                     d3.selectAll("input")
+                        .on("click", function() {
+                          csv_header = this.id;
+                          color = this.style.background;
+                          var circles = svg.selectAll("circle")
+                                       .data(data)
+                                       .transition()
+                                       .duration(500)
+                                       .attr("r", function (d) { return Math.sqrt(d[csv_header]) * 3.14 * circle_scale })
+                        });
+
+                   });
+
+              });
+
+        </script>
+    </body>
+</html>

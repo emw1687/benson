@@ -1,5 +1,42 @@
 {% extends "kojak_layout.html" %}
 {% block body %}
+
+<img src="{{ url_for('static', filename='data/chicago2.jpg') }}">
+<center>
+<form action="." method="POST">
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-2">
+    <div class="input-group">
+      <span class="input-group-btn">
+      <input name="neighborhood" type="text" class="form-control" placeholder="Search for...">
+
+        <!--<button class="btn btn-default" type="button">Go!</button>-->
+        <input type="submit" name="my-form" class="btn btn-default">Submit</input>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-md-6"></div>
+</div><!-- /.row -->
+<!--
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Find:</span>
+  <input name="neighborhood" type="text" class="form-control" placeholder="Neighborhood" aria-describedby="basic-addon1">
+</div>
+-->
+<!--
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon2">In:</span>
+  <input  name="city" type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+</div>
+-->
+
+<!--<input type="submit" name="my-form" class="btn btn-default" value="Submit">-->
+</form>
+</center>
+  <!--
+
       <dl>
       <dt>Describe your neighborhood:
 
@@ -40,4 +77,5 @@
         </form>
 
       </dl>
+  -->
 {% endblock %}

@@ -20,7 +20,7 @@
 
           text {
             font-family: georgia;
-            font-size: 14px;
+            font-size: 20px;
           }
 
         </style>
@@ -28,7 +28,7 @@
     <body>
       <script type="text/javascript">
       //draw button for each topic
-      topics = [0, 1, 2, 3, 4, 5, 6, 7]
+      topics = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
       d3.select("body").selectAll("input")
         .data(topics)
         .enter()
@@ -40,7 +40,7 @@
       //svg width and height
       var w = 1000;
       var h = 300;
-      var padding = 50;
+      var padding = 60;
 
       //create svg
       var svg = d3.select("body")
@@ -49,7 +49,7 @@
                   .attr("height", h);
 
       //load data
-      d3.csv("data/lda_topic_word.csv", function(data) {
+      d3.csv("data/nmf_topic_word.csv", function(data) {
 
         //create scales
         var xscale = d3.scale.linear()
@@ -94,11 +94,11 @@
 
           //draw labels
           stemplots.append("text")
-                    .text(function(d) { return d[8]; })
+                    .text(function(d) { return d["word"]; })
                     .attr("x", function(d, i) { return xscale(i); })
-                    .attr("y", yscale( -3 * padding ))
+                    .attr("y", yscale( -0.15 ))
                     .attr("font-family", "sans-serif")
-                    .attr("font-size", "12px")
+                    .attr("font-size", "16px")
                     .attr("text-anchor", "middle")
                     .attr("fill", "none");
 
@@ -106,10 +106,10 @@
           stemplots.on("mouseover", function() {
               d3.select(this)
                 .select("circle")
-                .attr("fill", "orange");
+                .attr("fill", "#ff5c61");
               d3.select(this)
                 .select("line")
-                .attr("stroke", "orange");
+                .attr("stroke", "#ff5c61");
               d3.select(this)
                 .select("text")
                 .attr("fill", "grey");

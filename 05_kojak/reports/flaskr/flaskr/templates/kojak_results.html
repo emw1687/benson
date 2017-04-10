@@ -1,11 +1,49 @@
 {% extends "kojak_layout.html" %}
 
 {% block body %}
+<div class="col-md-2 sidebar" style="display:inline">
+  <h4>Neighborhood Types</h4>
+  <div id="area1" class="btn-group-vertical"></div>
+</div>
 
-<div id="area1"></div>
-<div id="area2"></div>
-<div id="area3"></div>
-<div id="area4"></div>
+<div class="col-md-10 col-md-offset-2 main">
+  <!--<div id="area2" class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">Neighborhoods</h3>
+    </div>
+  </div>-->
+  <h2 class="page-header">Neighborhoods</h2>
+  <div class="row placeholders">
+
+      <div id="areatext" class="col-md-4"><h3>Neighborhoods most related to {{ neighborhood_name }}</h3>
+        <div class="panel panel-default">
+        <ol>
+          <h4 style="text-align: left;"><li>{{ n1 }}, {{ c1 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n2 }}, {{ c2 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n3 }}, {{ c3 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n4 }}, {{ c4 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n5 }}, {{ c5 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n6 }}, {{ c6 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n7 }}, {{ c7 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n8 }}, {{ c8 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n9 }}, {{ c9 }}</li></h4>
+          <h4 style="text-align: left;"><li>{{ n10 }}, {{ c10 }}</li></h4>
+        </ol>
+      </div>
+    </div>
+
+    <div id="area2" class="col-md-8"><h3>Distribution of Similar Neighborhoods</h3></div>
+  </div>
+  <!--<div id="areatext" class="row placeholders" style="display:inline">Cities</div>
+  <div id="area2" class="row placeholders"></div>-->
+
+  <h2 class="page-header">Words</h3>
+  <div class="row placeholders">
+    <div id="area3" class="col-md-7"><h3>Distribution of Words</h3></div>
+    <div id="area4" class="col-md-5"><h3>Top 10 Words</h3></div>
+  </div>
+
+</div>
 
 <script type="text/javascript">
 /*
@@ -15,6 +53,9 @@ https://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
 //get topic value from flask
 var max_topic_index = "{{ max_topic_index }}";
 var max_topic = "{{ max_topic }}";
+var neighborhood_name = "{{ neighborhood_name }}"
+
+//console.log(n1, n2, n3, n4, n5);
 
 //BUTTONS
   //property types
@@ -22,19 +63,19 @@ var max_topic = "{{ max_topic }}";
     ["1_taco", "Tacos", 1.0],
     ["2_subway", "Subways", 2.0],
     ["3_car", "Cars", 3.0],
-    ["4_museum", "Museum", 4.0],
-    ["5_farmer", "Farmer's Markets", 5.0],
-    ["6_campus", "Campus", 6.0],
-    ["7_diverse", "Diverse", 7.0],
+    ["4_museum", "Museums", 4.0],
+    ["5_farmer", "Farmers' Markets", 5.0],
+    ["6_campus", "Universities", 6.0],
+    ["7_diverse", "Diversity", 7.0],
     ["8_art", "Art", 8.0],
-    ["9_nightlife", "Nightlife", 9.0],
-    ["10_attractions", "Attractions", 10.0],
-    ["11_golf", "Golf", 11.0],
+    ["9_nightlife", "Apartment Living", 9.0],
+    ["10_attractions", "Zoos", 10.0],
+    ["11_golf", "Golf & Tennis", 11.0],
     ["12_outdoors", "Outdoors", 12.0],
     ["13_streetcars", "Streetcars", 13.0],
     ["14_water", "Water", 14.0],
-    ["15_breweries", "Breweries", 15.0],
-    ["16_bikes", "Bikes", 16.0]
+    ["15_breweries", "Light Rail", 15.0],
+    ["16_bikes", "Bikes & Brews", 16.0]
   ];
 
   //create buttons
@@ -44,6 +85,7 @@ var max_topic = "{{ max_topic }}";
     .append("input")
     .attr("type", "button")
     .attr("class", "btn btn-default")
+    .attr("width", "20px")
     .attr("id", function(d) { return d[0]; })
     .attr("value", function(d) { return d[1]; });
     /*.style("color", "grey")
@@ -55,8 +97,8 @@ var max_topic = "{{ max_topic }}";
 
 //MAP
   //svg width and height
-  var w = 600;
-  var h = 450;
+  var w = 700;
+  var h = 400;
 
   //create svg for map
   var svg2 = d3.select("#area2")
@@ -110,19 +152,19 @@ var max_topic = "{{ max_topic }}";
 
 //STEMPLOTS
   //svg width and height
-  var w = 800;
+  var w = 700;
   var h = 300;
-  var padding = 60;
+  var padding = 20;
 
   //create svg
-  var svg3 = d3.select("#area4")
+  var svg3 = d3.select("#area3")
               .append("svg")
               .attr("width", w)
               .attr("height", h);
 
   var yscale = d3.scale.linear()
                 .domain([0, 2.0])
-                .range([h-padding/2, padding/2]);
+                .range([h-padding*1.5, padding/2]);
 
   //function to draw stems
   var draw_stems = function(data, topic) {
@@ -170,8 +212,8 @@ var max_topic = "{{ max_topic }}";
               .text(function(d) { return d["word"]; })
               .attr("x", function(d, i) { return xscale(i); })
               .attr("y", yscale(-0.15))
-              .attr("font-family", "georgia")
-              .attr("font-size", "12px")
+              //.attr("font-family", "georgia")
+              .attr("font-size", "16px")
               .attr("text-anchor", "middle")
               .attr("fill", "none");
 
@@ -210,7 +252,7 @@ var max_topic = "{{ max_topic }}";
     //draw axes
     svg3.append("g")
         .attr("class", "axis")
-        .attr("transform", "translate(" + padding + ", 0)")
+        .attr("transform", "translate(" + padding * 1.5 + ", 0)")
         .call(yAxis);
 
     svg3.selectAll(".axis path")
@@ -298,8 +340,8 @@ var max_topic = "{{ max_topic }}";
             .attr("vertical-align", "middle")
             .text(function(d) { return d["word"]; })
             .style({
-              "fill": "white",
-              "font-family": "georgia",
+              "fill": "black",
+              //"font-family": "georgia",
               "font-size": "12px"
             });
   };
