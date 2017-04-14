@@ -21,12 +21,12 @@
 2. [Clean data](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/02_cleaning.ipynb) and [complete EDA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/03_eda.ipynb)
 3. [Preprocess neighborhood descrptions for NLP](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/04_nlp_preprocessing.ipynb)
 4. Try different clustering methods:
-  * [NMF/LDA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05a_nmf_lda.ipynb) (visualize LDA clusters using [pyLDAvis](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/06_pyldavis.ipynb))
-  * [PCA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05b_pca_clustering.ipynb)
-  * [Neighborhood amenity scores](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05c_scores.ipynb)
+    * [NMF/LDA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05a_nmf_lda.ipynb) (visualize LDA clusters using [pyLDAvis](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/06_pyldavis.ipynb))
+    * [PCA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05b_pca_clustering.ipynb)
+    * [Neighborhood amenity scores](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05c_scores.ipynb)
 5. Try different regression methods for hyperlocal modeling:
-  * [Linear Regression](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/07a_linear_regression.ipynb)
-  * [Random Forest Regression](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/07b_random_forest_regression.ipynb)
+    * [Linear Regression](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/07a_linear_regression.ipynb)
+    * [Random Forest Regression](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/07b_random_forest_regression.ipynb)
 6. Create recommendation systems:
-  * [Based on features of listings](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/08a_rec_system_features.ipynb)
-  * [Based on neighborhood descriptions](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/08b_rec_system_nlp.ipynb)
+    * [Based on features of listings](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/08a_rec_system_features.ipynb)
+    * [Based on neighborhood descriptions](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/08b_rec_system_nlp.ipynb)
