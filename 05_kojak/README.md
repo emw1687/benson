@@ -1,4 +1,4 @@
-## [What is the Pilsen of New York?](https://github.com/emw1687/metis_projects/blob/master/05_kojak/presentation.pdf)
+## [What is the Pilsen of New York?](https://github.com/emw1687/metis_projects/blob/master/05_kojak/Presentation.pdf)
 ### Recommending neighborhoods using topic modeling
 
 #### Tools
