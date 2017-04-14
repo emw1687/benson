@@ -1,56 +1,32 @@
-05_kojak
-==============================
+## [What is the Pilsen of New York?](https://github.com/emw1687/metis_projects/blob/master/05_kojak/presentation.pdf)
+### Recommending neighborhoods using topic modeling
 
-A short description of the project.
+#### Tools
+* [geopandas](http://geopandas.org/)
+* [pyproj](https://pypi.python.org/pypi/pyproj?)
+* [geopy](https://github.com/geopy/geopy)
+* [nltk](http://www.nltk.org/)
+* [Pandas](http://pandas.pydata.org/)
+* [Seaborn](http://seaborn.pydata.org/index.html)
+* [Scikit-learn](http://scikit-learn.org/stable/)
+* [d3](https://d3js.org/)
+* [Flask](http://flask.pocoo.org/)
 
-Project Organization
-------------
+#### Data Sources
+* [Inside Airbnb](http://insideairbnb.com/get-the-data.html)
+* [Zillow](https://www.zillow.com/howto/api/neighborhood-boundaries.htm)
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
-
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+#### Pipeline
+1. [Assign neighborhoods to listings based on lat/long](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/01_assign_neighborhoods.ipynb)
+2. [Clean data](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/02_cleaning.ipynb) and [complete EDA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/03_eda.ipynb)
+3. [Preprocess neighborhood descrptions for NLP](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/04_nlp_preprocessing.ipynb)
+4. Try different clustering methods:
+  * [NMF/LDA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05a_nmf_lda.ipynb) (visualize LDA clusters using [pyLDAvis](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/06_pyldavis.ipynb))
+  * [PCA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05b_pca_clustering.ipynb)
+  * [Neighborhood amenity scores](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05c_scores.ipynb)
+5. Try different regression methods for hyperlocal modeling:
+  * [Linear Regression](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/07a_linear_regression.ipynb)
+  * [Random Forest Regression](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/07b_random_forest_regression.ipynb)
+6. Create recommendation systems:
+  * [Based on features of listings](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/08a_rec_system_features.ipynb)
+  * [Based on neighborhood descriptions](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/08b_rec_system_nlp.ipynb)
