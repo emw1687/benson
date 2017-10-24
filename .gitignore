@@ -4,4 +4,4 @@
 */**/*.sqlite
 *.ipynb_*
 ./**/*.ipynb_*
-./**/.twitter_config
+/**/.twitter_config
