@@ -19,7 +19,7 @@ Based on the results of my model, he just might be.
 * [Statsmodel](http://statsmodels.sourceforge.net/)
 
 #### Pipeline
-1. [Scrape](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/01_wikipedia_scraping.ipynb) and [clean](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/02_wikipedia_cleaning.ipynb) data from wikipedia pages listing NYT #1 bestsellers from 1942-2016
-2. [Retrieve](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/03_goodreads_api.ipynb) and [clean](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/04_goodreads_cleaning.ipynb) data about each NYT #1 bestseller using the goodreads API
-3. [Explore and visualize the data set](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/05_nyt_eda.ipynb)
-4. [Create linear regression model to predict average book rating ](https://github.com/emw1687/metis_projects/blob/master/luther/notebooks/06_nyt_models_back_to_basics.ipynb)
+1. [Scrape](https://github.com/emw1687/metis_projects/blob/master/02_luther/notebooks/01_wikipedia_scraping.ipynb) and [clean](https://github.com/emw1687/metis_projects/blob/master/02_luther/notebooks/02_wikipedia_cleaning.ipynb) data from wikipedia pages listing NYT #1 bestsellers from 1942-2016
+2. [Retrieve](https://github.com/emw1687/metis_projects/blob/master/02_luther/notebooks/03_goodreads_api.ipynb) and [clean](https://github.com/emw1687/metis_projects/blob/master/02_luther/notebooks/04_goodreads_cleaning.ipynb) data about each NYT #1 bestseller using the goodreads API
+3. [Explore and visualize the data set](https://github.com/emw1687/metis_projects/blob/master/02_luther/notebooks/05_nyt_eda.ipynb)
+4. [Create linear regression model to predict average book rating ](https://github.com/emw1687/metis_projects/blob/master/02_luther/notebooks/06_nyt_models_back_to_basics.ipynb)
