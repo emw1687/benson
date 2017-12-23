@@ -2,11 +2,11 @@
 ### Flint: A Cautionary Tale
 
 #### Summary
-In April 2014, the City of Flint switched their water source from the Detroit water system to the Flint River. A year and a half later, the city switched the source was switched back, but by that time, residents had been exposed to dangerous levels of lead and other contaminants in their drinking water.
+In April 2014, the City of Flint switched their water source from the Detroit water system to the Flint River. A year and a half later, the City switched the source back, but by that time, residents had been exposed to dangerous levels of lead and other contaminants in their drinking water.
 
-As an environmental engineer by training and practice as well as a former AmeriCorps member and public servant, I was very interested in piecing together how this could have happened: my hypothesis is that Flint was at the center of a perfect storm of aging physical infrastructure, a mismanaged public water supply, and socio-economic characteristics.
+As an environmental engineer by training and practice as well as a former AmeriCorps member and public servant, I was very interested in piecing together how this could have happened: my hypothesis is that Flint was at the center of a perfect storm of aging physical infrastructure, mismanagement of the public water supply, and socio-economic characteristics.
 
-Because the Massachusetts Department of Environmental Protection has initiated an assistance program with public schools, drinking water quality data from schools across the state is available. With the Flint framework in mind, I built models to explore the relationship between physical infrastructure, public water supply management indicators, and socio-economic characteristics and drinking water quality in Massachusetts public schools.
+Because the Massachusetts Department of Environmental Protection has initiated an assistance program with public schools, drinking water quality data from schools across the state is available. With the Flint framework in mind, I built models to explore the relationship between physical infrastructure, public water supply management indicators, socio-economic characteristics, and drinking water quality in Massachusetts public schools.
 
 Thankfully, in Massachusetts, physical infrastructure is most influential factor in predicting water quality.
 
