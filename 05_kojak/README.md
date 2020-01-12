@@ -19,7 +19,7 @@
 #### Pipeline
 1. [Assign neighborhoods to listings based on lat/long](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/01_assign_neighborhoods.ipynb)
 2. [Clean data](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/02_cleaning.ipynb) and [complete EDA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/03_eda.ipynb)
-3. [Preprocess neighborhood descrptions for NLP](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/04_nlp_preprocessing.ipynb)
+3. [Preprocess neighborhood descriptions for NLP](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/04_nlp_preprocessing.ipynb)
 4. Try different clustering methods:
     * [NMF/LDA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05a_nmf_lda.ipynb) (visualize LDA clusters using [pyLDAvis](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/06_pyldavis.ipynb))
     * [PCA](https://github.com/emw1687/metis_projects/blob/master/05_kojak/notebooks/05b_pca_clustering.ipynb)
